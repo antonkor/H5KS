@@ -1,0 +1,123 @@
+/* ========================================== */
+/* Primary colors */
+/* ======================================== */
+$blue-bulb: #1686bd;
+
+.blue-bulb { color: $blue-bulb; }
+a.blue-bulb:hover { color: darken($blue-bulb, 10%); }
+
+
+
+/* ========================================== */
+/* Typography */
+/* ======================================== */
+html, html a { 
+  @include font-smoothing();
+}
+
+body { font-family: $nice-font; font-weight: normal; }
+
+h1, h2, h3 { font-family: $heading-font; font-weight: normal; }
+
+.h-xxhuge {
+  font-size: 85px;
+  line-height: 1;
+}
+.h-xhuge {
+  font-size: 60px;
+  line-height: 1;
+}
+.h-huge {
+  font-size: 45px;
+  line-height: 1;
+
+  strong {
+    font-size: 50px;
+  }
+}
+.h-large {
+  font-size: 60px;
+  font-weight: 500;
+}
+@include mq(tablet-up) {
+  .h-xxhuge {
+    font-size: 100px;
+  }
+  .h-xhuge {
+    font-size: 80px;
+  }
+  .h-huge {
+    font-size: 70px;
+
+    strong {
+      font-size: 80px;
+    }
+  }
+  .h-large {
+
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* ========================================== */
+/* Buttons */
+/* ======================================== */
+.btn-round {
+  @include border-radius(50%);
+  color: white;
+  text-transform: uppercase;
+  @include transition(background .7s);
+
+  &:hover {
+    color: white;
+  }
+}
+.btn-medium {
+  height: 107px;
+  width: 107px;
+  padding: 0;
+
+  font-size: 18px;
+}
+.btn-large {
+  height: 159px;
+  width: 159px;
+
+  font-size: 22px;
+}
+.btn-blue { background-color: $blue-bulb; }
+
+
+/* ========================================== */
+/* Sections */
+/* ======================================== */
+.section-white {
+  background-color: white;
+  
+  a {
+    color: #3e3e3e;
+  }
+}
+.section-light {
+  background-color: #f5f5f5;
+}
+.section-medium {
+  background-color: #383838;
+  color: white;
+}
+.section-dark {
+  background-color: #232323;
+  color: #adadad;
+}
+
+
+
+
+
+
+

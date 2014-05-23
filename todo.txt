@@ -1,0 +1,3 @@
+move bootstrap.scss to vendor
+
+rename assets to library

@@ -1,0 +1,37 @@
+@import "compass";
+@import "mixins";
+
+/* =====================================
+Sprites
+===================================== */
+
+
+
+/* =====================================
+Partials
+===================================== */
+//@import "partials/hero-light";
+
+
+
+/* =====================================
+Pages styles
+===================================== */
+.hero-section {
+  .container  {
+    background: url('../img/tracer-hero.png') no-repeat center top;
+  }
+}
+@include mq(tablet-up) {
+  .hero-section {
+    .container  {
+
+    }
+  }
+}
+
+
+
+/* =====================================
+Plugins
+===================================== */
