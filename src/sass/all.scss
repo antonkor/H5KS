@@ -17,7 +17,7 @@ $ms2x: sprite-map("sprites@2x/main/*.png", $spacing: 10px);
 
 /* ======================================= */
 /* Page Styles */
-@import "home";
+@import "pages/home";
 
 /* ======================================= */
 /* Global Plugins */
@@ -26,4 +26,4 @@ $ms2x: sprite-map("sprites@2x/main/*.png", $spacing: 10px);
 /* ======================================= */
 /* Global Misc */
 @import "utilities";
-@import "print";
+@import "partials/print";
