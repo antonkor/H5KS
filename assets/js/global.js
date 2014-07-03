@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
 
-
+  //$('.page-header').headroom();
+  $(".page-header").headroom({
+    "tolerance": 5,
+    "offset": 205,
+  });
 
 
 

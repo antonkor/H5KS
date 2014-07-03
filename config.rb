@@ -11,7 +11,7 @@ http_path = "/"
 
 # 2. probably don't need to touch these
 css_dir = "assets/css/"
-sass_dir = "src/sass"
+sass_dir = "assets/sass"
 images_dir = "assets/img"
 javascripts_dir = "assets/js"
 environment = :production

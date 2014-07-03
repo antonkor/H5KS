@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".page-header").headroom({tolerance:5,offset:205}),$.localScroll.hash({target:"#content",queue:!0,duration:1500,offset:{top:-parseInt($("body").css("paddingTop"),10)}}),$.localScroll({queue:!0,duration:1e3,hash:!1,offset:{top:-parseInt($("body").css("paddingTop"),10)},onBefore:function(o,e,t){},onAfter:function(o,e){}})});

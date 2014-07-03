@@ -32,9 +32,6 @@ nbproject
 _notes
 dwsync.xml
 
-# Sublime Text 2
-assets/exclude/_1kw_proj.sublime-project
-assets/exclude/_1kw_proj.sublime-workspace
 
 # Folders to ignore
 .hg

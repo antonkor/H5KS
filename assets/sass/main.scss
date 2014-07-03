@@ -1,0 +1,32 @@
+@import "compass";
+@import "mixins";
+
+
+/* ======================================= */
+/* Global Sprite Maps */
+$global-sprite: sprite-map("sprites/global/*.png", $spacing: 10px);
+$gs2x: sprite-map("sprites@2x/global/*.png", $spacing: 10px);
+
+
+/* ======================================= */
+/* Global Plugins */
+@import "plugins/animate-min";
+@import "plugins/headroom";
+
+
+/* ======================================= */
+/* Global Styles */
+@import "global";
+
+
+/* ======================================= */
+/* Page Styles */
+@import "pages/home";
+
+
+
+
+
+/* ======================================= */
+/* Global Misc */
+@import "utilities";

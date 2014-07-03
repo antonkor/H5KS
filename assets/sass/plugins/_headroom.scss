@@ -1,0 +1,27 @@
+.headroom {
+  @include transition(transform .4s ease);
+}
+
+.headroom--top {
+
+}
+.headroom--not-top {
+
+}
+.headroom--pinned {
+
+}
+.headroom--unpinned {
+  @include transform(translateY(-100%));
+}
+@include mq(mobile-only) {
+  .tall-header.headroom--unpinned {
+    //margin-top: -81px;
+    @include transform(translateY(-100%));
+  }
+}
+@include mq(tablet-up) {
+  .tall-header.headroom--unpinned {
+    @include transform(translateY(-100%));
+  }
+}
