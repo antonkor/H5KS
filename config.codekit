@@ -20,6 +20,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/img\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4919,
+		"inputAbbreviatedPath": "\/assets\/img\/logo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/sprites\/global-s099de1f657.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -116,7 +127,7 @@
 		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/headroom.min-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/plugins\/jQuery.headroom.js": {
@@ -127,18 +138,7 @@
 		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/jQuery.headroom-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/plugins\/min\/jQuery.headroom-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/plugins\/min\/jQuery.headroom-ck.js",
-		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/min\/jQuery.headroom-ck-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/plugins\/skrollr.min.js": {
@@ -149,7 +149,7 @@
 		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/skrollr.min-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/vendor\/bootstrap.js": {

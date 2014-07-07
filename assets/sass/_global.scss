@@ -80,7 +80,11 @@ img {
   .logo-brand {
     display: inline-block;
     vertical-align: top;
-    margin: 28px 0 24px;
+    margin-left: 15px;
+
+    img {
+      height: 50px;
+    }
   }
   .navbar-nav {
     font-size: 18px;
@@ -88,6 +92,9 @@ img {
 }
 @include mq(tablet-up) {
   .page-header {
+    .logo-brand {
+      margin-left: 0;
+    }
     .navbar-nav {
       margin-top: 0;
 
