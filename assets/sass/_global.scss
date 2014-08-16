@@ -75,25 +75,43 @@ img {
   border-bottom: 1px solid #b4b4b5;
 
   .container {
-    margin: 20px auto;
+    margin: 20px auto 15px;
   }
   .logo-brand {
     display: inline-block;
     vertical-align: top;
     margin-left: 15px;
-
-    img {
-      height: 50px;
-    }
   }
   .navbar-nav {
     font-size: 18px;
   }
 }
+@include mq(mobile-only) {
+  .page-header {
+    .logo-brand {
+      height: 50px;
+      width: 70%;
+      
+      img {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        top: 50%;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}
 @include mq(tablet-up) {
   .page-header {
     .logo-brand {
+      margin-top: 5px;
       margin-left: 0;
+
+      img {
+        height: 50px;
+      }
     }
     .navbar-nav {
       margin-top: 0;

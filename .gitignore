@@ -3,6 +3,7 @@
 node_modules/**
 package.json
 Gruntfile.js
+config.codekit
 
 *.psd
 *.diff
