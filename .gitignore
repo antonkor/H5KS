@@ -1,9 +1,9 @@
 # Numerous always-ignore extensions
-/psd/
+_psd/**
+assets/sass/.sass-cache
 node_modules/**
 package.json
 Gruntfile.js
-config.codekit
 
 *.psd
 *.diff
