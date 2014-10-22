@@ -86,8 +86,8 @@ $nice-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // https://gist.github.com/eprothro/7309610 or
 // https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass
-@import "compass/utilities/sprites";         // Include compass sprite helpers
-@import "compass/css3/background-size";      // Include helper to calc background size
+//@import "compass/utilities/sprites";         // Include compass sprite helpers
+//@import "compass/css3/background-size";      // Include helper to calc background size
 
 @mixin retina-sprite($sprites, $sprites2x, $name, $hover: false, $active: false) {
   @include _retina-sprite($sprites, $sprites2x, $name, $hover, $active);

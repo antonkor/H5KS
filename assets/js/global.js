@@ -7,6 +7,8 @@ $(document).ready(function() {
     "offset": 205,
   });
 
+  // Move modals to bottom 
+  $('.modal').appendTo("body");
 
 
   /*

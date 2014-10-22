@@ -58,6 +58,22 @@
   //margin-right: -0.25em; 
 }
 
+.modal-va {
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  > div {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .exit, .close {
+    top: -50px;
+  }
+}
+
 
 .list-dividers {
   li {
@@ -114,3 +130,32 @@
 .mb-50 { margin-bottom: 50px !important; }
 .mb-55 { margin-bottom: 55px !important; }
 .mb-60 { margin-bottom: 60px !important; }
+
+
+
+.mr-0  { margin-right: 0 !important; }
+.mr-5  { margin-right: 5px !important; }
+.mr-10 { margin-right: 10px !important; }
+.mr-15 { margin-right: 15px !important; }
+.mr-20 { margin-right: 20px !important; }
+.mr-25 { margin-right: 25px !important; }
+.mr-30 { margin-right: 30px !important; }
+.mr-35 { margin-right: 35px !important; }
+.mr-40 { margin-right: 40px !important; }
+.mr-45 { margin-right: 45px !important; }
+.mr-50 { margin-right: 50px !important; }
+.mr-55 { margin-right: 55px !important; }
+.mr-60 { margin-right: 60px !important; }
+.ml-0  { margin-left: 0 !important; }
+.ml-5  { margin-left: 5px !important; }
+.ml-10 { margin-left: 10px !important; }
+.ml-15 { margin-left: 15px !important; }
+.ml-20 { margin-left: 20px !important; }
+.ml-25 { margin-left: 25px !important; }
+.ml-30 { margin-left: 30px !important; }
+.ml-35 { margin-left: 35px !important; }
+.ml-40 { margin-left: 40px !important; }
+.ml-45 { margin-left: 45px !important; }
+.ml-50 { margin-left: 50px !important; }
+.ml-55 { margin-left: 55px !important; }
+.ml-60 { margin-left: 60px !important; }
