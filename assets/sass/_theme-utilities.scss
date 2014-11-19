@@ -1,0 +1,35 @@
+@import "compass";
+@import "mixins";
+
+.section-sm {
+  padding: 30px 0;
+}
+.section-md {
+  padding: 50px 0;
+}
+.section-lg {
+  padding: 80px 0;
+}
+@include mq(tablet-up) {
+
+}
+@include mq(desktop-up) {
+
+}
+@include mq(large-desktop-up) {
+
+}
+
+
+.section-white {
+  background-color: #fff;
+}
+.section-light {
+  background-color: #f2f2f2;
+}
+.section-medium {
+  background-color: #f2f2f2;
+}
+.section-dark {
+  background: #757575;
+}
