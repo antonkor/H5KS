@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  pushBody(false);
 
   //$('.page-header').headroom();
   $(".page-header").headroom({
@@ -48,3 +49,19 @@ $(document).ready(function() {
 
 
 });
+$(window).on("throttledresize", function( event ) {
+  pushBody(false);
+});
+
+
+
+// Header magic
+function pushBody(includeSubHeader) {
+  var topNavHeight = $('.navbar-fixed-top').height();
+
+  if(includeSubHeader === undefined) {
+    topNavHeight += $('.sub-header').height();
+  }
+
+  $('body').css({paddingTop: topNavHeight});
+}

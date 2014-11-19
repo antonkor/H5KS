@@ -1,18 +1,6 @@
 /* ========================================== */
 /* Global Styles */
 /* ======================================== */
-// Disable fixed header on mobile
-.navbar-fixed-top {
-  position: relative;
-}
-@include mq(tablet-up) {
-  body {
-    padding-top: 100px; // header's height;
-  }
-  .navbar-fixed-top {
-    position: fixed;
-  }
-}
 
 
 
@@ -103,6 +91,8 @@ img {
     }
   }
 }
+
+
 @include mq(tablet-up) {
   .page-header {
     .logo-brand {
