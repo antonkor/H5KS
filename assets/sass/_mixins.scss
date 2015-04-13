@@ -1,9 +1,10 @@
-// Fonts
-$heading-font: "trajan-pro-3",sans-serif;
-$content-font: "wayfinding-sans-extended", sans-serif;
+$heading-font: sans-serif;
+$content-font: sans-serif;
 $plain-font: Arial, sans-serif;
 $nice-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+
+// Fonts
 @mixin font-smoothing() {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
