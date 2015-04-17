@@ -458,7 +458,7 @@
   background-image: url('../img/sprites/global-s099de1f657.png');
   background-position: 0 0;
   background-repeat: no-repeat; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 2dppx) {
     .i-close {
       background-image: url('../img/sprites@2x/global-sa7526852c4.png');
       background-position: 0 0;

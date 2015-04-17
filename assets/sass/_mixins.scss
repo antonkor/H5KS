@@ -129,7 +129,7 @@ $nice-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: $pad;
   }
   
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 2dppx) {
     & {
       $pos: sprite-position($sprites2x, $name, -$pad * 2, -$pad * 2);
       background-image: sprite-url($sprites2x);
