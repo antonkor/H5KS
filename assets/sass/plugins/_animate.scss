@@ -1296,7 +1296,9 @@
 }
 
 // Delays
-.delay1s { @include animation-delay(1s); }
-.delay1-25s { @include animation-delay(1.25s); }
-.delay1-5s { @include animation-delay(1.5s); }
-.delay2s { @include animation-delay(2s); }
+// Delays
+.delay-xs { @include animation-delay(.5s); }
+.delay-sm { @include animation-delay(1s); }
+.delay-md { @include animation-delay(1.5s); }
+.delay-lg { @include animation-delay(2s); }
+

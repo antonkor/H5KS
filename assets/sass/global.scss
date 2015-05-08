@@ -4,6 +4,22 @@
 @import "bs-variables";
 @import "bs-mixins";
 
+@include mq(mobile-only) {
+  .mobile-only {
+    display: block;
+  }
+}
+@include mq(tablet-only) {
+  .tablet-only {
+    display: block;
+  }
+}
+@include mq(desktop-up) {
+  .desktop-up {
+    display: block;
+  }
+}
+
 
 /* Global Plugins */
 @import "plugins/animate-min";

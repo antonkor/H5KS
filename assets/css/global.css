@@ -1,3 +1,12 @@
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .tablet-only {
+    display: block; } }
+@media (min-width: 992px) {
+  .desktop-up {
+    display: block; } }
 /* Global Plugins */
 .animated {
   -webkit-animation-fill-mode: both;
@@ -408,23 +417,19 @@
   -webkit-animation-name: fadeInUpSuper;
   animation-name: fadeInUpSuper; }
 
-.delay_5s {
+.delay-xs {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s; }
 
-.delay1s {
+.delay-sm {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-.delay1_25s {
-  -webkit-animation-delay: 1.25s;
-  animation-delay: 1.25s; }
-
-.delay1_5s {
+.delay-md {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s; }
 
-.delay2s {
+.delay-lg {
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
