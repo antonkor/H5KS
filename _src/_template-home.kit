@@ -1,17 +1,5 @@
+<!-- @import "_page-head" -->
 
-
-<!DOCTYPE html>
-<html class="no-js">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HTML5 Kickstart</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/global.css">
-  
   <!-- page specific styles -->
   <link rel="stylesheet" href="assets/css/page-home.css">
   <!-- END page specific styles -->
@@ -19,7 +7,7 @@
   <script src="assets/js/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
-<body class="template-home">
+<body class="<!-- $bodyClass-->">
   <header class="page-header navbar navbar-fixed-top animated fadeIn" id="top" role="banner">
     <div class="container">
       <div class="navbar-header">
@@ -32,14 +20,7 @@
         <a class="logo-brand" href="./"><img src="assets/img/logo.png"></a>
       </div>
       
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">home</a></li>
-          <li class="nav-link"><a href="#">about</a></li>
-          <li class="nav-link"><a href="#">blog</a></li>
-          <li class="nav-link"><a href="#">contact</a></li>
-        </ul>
-      </nav>
+<!-- @import "_partial-main-nav" -->
 
     </div>
   </header>
@@ -60,30 +41,8 @@
   </div>
 
 
-  <div class="sub-footer animated fadeIn">
-    <div class="container">
+<!-- @import "_page-footer" -->
 
-    </div>
-  </div>
-  <footer class="page-footer animated fadeIn">
-    <div class="container">
-      <ul class="nav navbar-nav">
-        <li><a href="./one.html">&copy; H5KS</a></li>
-        <li><a href="./two.html">two</a></li>
-        <li><a href="./three.html">three</a></li>
-        <li><a href="./four.html">four</a></li>
-      </ul>
-    </div>
-  </footer>
-
-
-  <!-- global scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/global.js"></script> 
-  <!-- END global scripts -->
   <!-- page specific scripts -->
   <script src="assets/js/pages/home.js"></script>
   <!-- END page specific scripts -->

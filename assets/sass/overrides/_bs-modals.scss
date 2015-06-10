@@ -1,0 +1,55 @@
+// ios fix: background scrolls
+.modal-open {
+	position: fixed; 
+	width: 100%;
+
+	@media (max-width: 767px) { 
+
+	}
+}
+
+
+// animate modals from different sides
+.modal.fade:not(.in).left .modal-dialog {
+	-webkit-transform: translate3d(-25%, 0, 0);
+	transform: translate3d(-25%, 0, 0);
+}
+.modal.fade:not(.in).right .modal-dialog {
+	-webkit-transform: translate3d(25%, 0, 0);
+	transform: translate3d(25%, 0, 0);
+}
+.modal.fade:not(.in).bottom .modal-dialog {
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+
+
+// vertically center modal windowss
+.modal-va {
+	.no-csstransforms & {
+		.modal-content {
+			margin-top: 100px;
+		}
+	}
+
+	.csstransforms & {
+		height: 100%;
+	  margin-top: 0;
+	  margin-bottom: 0;
+
+	  > div {
+	    position: relative;
+	    top: 50%;
+	   
+	    -webkit-transform: translate3d(0, -50%, 0);
+			transform: translate3d(0, -50%, 0);
+	  }
+	}
+
+	.exit, .close {
+  	position: absolute;
+	  top: -30px;
+	  right: 0;
+	  color: white;
+  }
+}

@@ -3,6 +3,42 @@
 /* ========================================== */
 /* Utility classes */
 /* ======================================== */
+
+// Display helpers 
+@include display("block");
+@include display("inline-block");
+@include display("inline");
+@include display("flex");
+
+@include mq(mobile-only) {
+  @include display-xs("block");
+  @include display-xs("inline-block");
+  @include display-xs("inline");
+  @include display-xs("flex");
+}
+
+@include mq(tablet-up) {
+  @include display-sm("block");
+  @include display-sm("inline-block");
+  @include display-sm("inline");
+  @include display-sm("flex");
+}
+
+@include mq(desktop-up) {
+  @include display-md("block");
+  @include display-md("inline-block");
+  @include display-md("inline");
+  @include display-md("flex");
+}
+
+@include mq(large-desktop-up) {
+  @include display-lg("block");
+  @include display-lg("inline-block");
+  @include display-lg("inline");
+  @include display-lg("flex");
+}
+
+// Control spacing
 .mt-0  { margin-top: 0 !important; }
 .mt-5  { margin-top: 5px !important; }
 .mt-10 { margin-top: 10px !important; }
@@ -57,7 +93,24 @@
 .ml-55 { margin-left: 55px !important; }
 .ml-60 { margin-left: 60px !important; }
 
-// padding helpers
+
+// No padding
+@include no-padding("left");
+@include no-padding("right");
+@include no-padding("top");
+@include no-padding("bottom");
+@include no-padding("all");
+
+// No margin
+@include no-margin("left");
+@include no-margin("right");
+@include no-margin("top");
+@include no-margin("bottom");
+@include no-margin("all");
+
+
+
+// Padding space
 .padding-xs {
   padding: 10px 0;
   @include mq(tablet-up) { }
@@ -74,8 +127,7 @@
   padding: 100px 0;
   @include mq(tablet-up) { }
 }
-
-// margin helpers
+// Margin space
 .margin-xs {
   margin: 10px 0;
   @include mq(tablet-up) { }
@@ -92,6 +144,7 @@
   margin: 100px 0;
   @include mq(tablet-up) { }
 }
+
 
 // Max width helpers
 .max-xs {
@@ -119,7 +172,7 @@
 }
 
 
-// Text size helpers
+// Text helpers
 .text-xs  {
   font-size: 10px !important;
   @include mq(tablet-up) { }
@@ -135,6 +188,10 @@
 .text-lg  {
   font-size: 30px !important;
   @include mq(tablet-up) { }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 
@@ -189,22 +246,6 @@
   // Adjusts for spacing
   margin-top: 4px;
   //margin-right: -0.25em; 
-}
-
-.modal-va {
-  height: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  > div {
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));
-  }
-
-  .exit, .close {
-    top: -50px;
-  }
 }
 
 

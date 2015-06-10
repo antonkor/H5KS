@@ -16,6 +16,124 @@ $nice-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
+
+// Flex Properties
+@mixin flexbox() {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  align-items: $value;
+}
+@mixin flex-grow($value) {
+  -webkit-flex-grow: $value;
+  -moz-flex-grow: $value;
+  -ms-flex-grow: $value;
+  flex-grow: $value;
+}
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  justify-content: $value;
+}
+
+
+// Display overrides
+@mixin display($type) {
+  @if $type == 'flex' {
+    .display-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-xs($type) {
+  @if $type == 'flex' {
+    .display-xs-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-xs-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-sm($type) {
+  @if $type == 'flex' {
+    .display-sm-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-sm-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-md($type) {
+  @if $type == 'flex' {
+    .display-md-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-md-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+@mixin display-lg($type) {
+  @if $type == 'flex' {
+    .display-lg-flex {
+      @include flexbox();
+    }
+  } @else {
+    .display-lg-#{$type} {
+      display: #{$type} !important;
+    }
+  }
+}
+
+
+// Spacing overrides
+@mixin no-padding($side) {
+  @if $side == 'all' {
+    .no-padding {
+      padding: 0 !important;
+    }
+  } @else {
+    .no-padding-#{$side} {
+      padding-#{$side}: 0 !important;
+    }
+  }
+}
+@mixin no-margin($side) {
+  @if $side == 'all' {
+    .no-margin {
+      margin: 0 !important;
+    }
+  } @else {
+    .no-margin-#{$side} {
+      margin-#{$side}: 0 !important;
+    }
+  }
+}
+
+
 // CSS3 animations
 @mixin animation-delay($delay) {
   -webkit-animation-delay: $delay;

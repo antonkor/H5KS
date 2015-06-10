@@ -11,6 +11,11 @@ $(document).ready(function() {
   // Move modals to bottom 
   $('.modal').appendTo("body");
 
+  // Keep modal-open if another modal is called
+  $(document).on('hidden.bs.modal', '.modal', function () {
+    $('.modal:visible').length && $(document.body).addClass('modal-open');
+  });
+
 
   /*
   if ($(window).width() >= 768) {
@@ -64,4 +69,30 @@ function pushBody(includeSubHeader) {
   }
 
   $('body').css({paddingTop: topNavHeight});
+}
+
+
+function responsiveHelpers() {
+  var is_mobile = false,
+      is_tablet = false,
+      is_desktop = false,
+      not_mobile = false,
+      not_tablet = false,
+      not_desktop = false;
+
+  if ($(window).width() <= 767) {
+    is_mobile = true;
+  } else {
+    not_mobile = true;
+  }
+  if ($(window).width() >= 768 && $(window).width() <= 992) {
+    is_tablet = true;
+  } else {
+    not_tablet = true;
+  }
+  if ($(window).width() >= 992) {
+    is_desktop = true;
+  } else {
+    not_desktop = true;
+  }
 }
