@@ -1,61 +1,3 @@
-/* ========================================== */
-/* Global Styles */
-/* ======================================== */
-
-
-
-/* ======================================= */
-/* Global Sprites */
-.i-close { @include retina-sprite($global-sprite, $gs2x, i-close); }
-
-
-
-
-
-
-/* ======================================= */
-/* Typography */
-html, html a { 
-  @include font-smoothing();
-}
-
-body { font-family: $nice-font; font-weight: normal; }
-
-h1, h2, h3 { font-family: $heading-font; font-weight: normal; }
-
-.h-xxhuge {
-
-}
-.h-xhuge {
-
-}
-.h-huge {
-
-}
-.h-large {
-
-}
-@include mq(tablet-up) {
-  .h-xxhuge {
-
-  }
-  .h-xhuge {
-
-  }
-  .h-huge {
-
-  }
-  .h-large {
-
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-
-/* ======================================= */
 /* Global Header */
 .page-header {
   margin: 0;
@@ -91,8 +33,6 @@ img {
     }
   }
 }
-
-
 @include mq(tablet-up) {
   .page-header {
     .logo-brand {
@@ -133,55 +73,16 @@ img {
 
 
 
-/* =======================================================*/
-/* Global Body */
-.page-body {
-  
-  .container {
 
-  }
-}
 
-.content-section {
 
-}
-@include mq(tablet-up) {
 
-}
-@include mq(desktop-up) {
 
-}
-@include mq(large-desktop-up) {
-
-}
 
 
 
 /* =======================================================*/
 /* Global Footer */
-.sub-footer {
-  font-size: 14px;
-
-  .container {
-    
-  }
-}
-@include mq(mobile-only) {
-  .sub-footer {
-    .container {
-
-    }
-  }
-}
-@include mq(tablet-up) {
-  .sub-footer {
-    .container {
-
-    }
-  }
-}
-
-
 .page-footer .container {
   text-align: center;
 
