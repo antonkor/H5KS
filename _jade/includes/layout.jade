@@ -14,7 +14,7 @@ head
 
   block pageHeadEnd
 
-header#top.page-header.navbar.navbar-fixed-top.animated.fadeIn
+header#top.page-header.navbar.animated.fadeIn
   div.container
     div.navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse') 
@@ -40,9 +40,9 @@ body(class="#{bodyClass}")
   block pageBody
 
 
-footer.page-footer.animated.fadeIn
+footer.page-footer.animated.fadeIn.text-center
   div.container
-    ul.nav.navbar-nav
+    ul.nav.list-inline
       li
         a(href="index.html") Home
       li
@@ -51,6 +51,7 @@ footer.page-footer.animated.fadeIn
         a(href="blog.html") Blog
       li
         a(href="contact.html") Contact
+    div.text-muted &reg; H5KS 2015&trade;
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
