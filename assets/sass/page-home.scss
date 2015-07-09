@@ -1,15 +1,12 @@
 @import "compass";
 @import "mixins";
-
-@import "bs-variables";
-@import "bs-mixins";
-
+@import "variables";
 
 
 /* =====================================
 Partials
 ===================================== */
-//@import "partials/hero-light";
+
 
 
 
@@ -19,6 +16,8 @@ Pages styles
 .hero-section {
   .container  {
     //background: url('../img/tracer-hero.png') no-repeat center top;
+
+    
   }
 }
 @include mq(tablet-up) {
