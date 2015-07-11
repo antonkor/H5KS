@@ -11,6 +11,10 @@
     display: inline-block;
     vertical-align: top;
     margin-left: 15px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
   .navbar-nav {
     font-size: 18px;

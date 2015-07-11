@@ -85,7 +85,7 @@ function responsiveHelpers() {
   } else {
     not_mobile = true;
   }
-  if ($(window).width() >= 768 && $(window).width() <= 992) {
+  if ($(window).width() >= 768 && $(window).width() <= 991) {
     is_tablet = true;
   } else {
     not_tablet = true;

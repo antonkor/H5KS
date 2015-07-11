@@ -1,6 +1,8 @@
 @import "compass";
 @import "mixins";
 @import "variables";
+@import "bootstrap/variables";
+
 
 
 /* Global Partials */
@@ -10,39 +12,18 @@
 
 
 /* Global Plugins */
-@import "plugins/animate-custom";
+@import "plugins/animate/animate";
 @import "plugins/headroom";
 
 
 /* Global Sprite Maps */
-$global-sprite: sprite-map("sprites/global/*.png", $spacing: 10px);
-$gs2x: sprite-map("sprites@2x/global/*.png", $spacing: 10px);
-.i-close { @include retina-sprite($global-sprite, $gs2x, i-close); }
-
-
-
-
-img {
-  max-width: 100%;
-}
-
-
-
-
-/* Global Body */
-.page-body {
-  
-  .container {
-
-  }
-}
-
-/* Global Styles */
-.content-section {
-
-}
-
-
-
-
+// how to use sprite
+// 1. first import sprite folder
+//$global-sprite: sprite-map("sprites/global/*.png", $spacing: 10px);
+//$gs2x: sprite-map("sprites@2x/global/*.png", $spacing: 10px);
+// 2. add sprite to class
+//.i-close { @include retina-sprite($global-sprite, $gs2x, i-close); }
+// 3. make sure to add .ir or .iir sub-class to .i-close
+// 4. profit (Not, don't use sprites anymore, use icon-fonts!)
+// 5. learn how to use svg sprites
 
