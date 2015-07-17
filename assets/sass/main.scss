@@ -4,6 +4,10 @@
 @import "bootstrap/variables";
 
 
+/* Global Plugins */
+@import "plugins/animate/animate";
+@import "plugins/headroom";
+
 
 /* Global Partials */
 @import "common/*";
@@ -11,9 +15,6 @@
 @import "layout/*";
 
 
-/* Global Plugins */
-@import "plugins/animate/animate";
-@import "plugins/headroom";
 
 
 /* Global Sprite Maps */

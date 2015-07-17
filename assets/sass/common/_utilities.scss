@@ -251,6 +251,8 @@
 
 
 // Animation delays
+.delay-xxxs { @include animation-delay(.2s); }
+.delay-xxs { @include animation-delay(.35s); }
 .delay-xs { @include animation-delay(.5s); }
 .delay-sm { @include animation-delay(1s); }
 .delay-md { @include animation-delay(1.5s); }

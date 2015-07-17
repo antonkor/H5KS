@@ -1,27 +1,21 @@
 .headroom {
   @include transition(transform .4s ease);
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  -ms-animation-fill-mode: none;
+  -o-animation-fill-mode: none;
+  animation-fill-mode: none;
 }
 
-.headroom--top {
+.headroom.headroom--top {
 
 }
-.headroom--not-top {
+.headroom.headroom--not-top {
 
 }
-.headroom--pinned {
+.headroom.headroom--pinned {
 
 }
-.headroom--unpinned {
+.headroom.headroom--unpinned {
   @include transform(translateY(-100%));
-}
-@include mq(mobile-only) {
-  .tall-header.headroom--unpinned {
-    //margin-top: -81px;
-    @include transform(translateY(-100%));
-  }
-}
-@include mq(tablet-up) {
-  .tall-header.headroom--unpinned {
-    @include transform(translateY(-100%));
-  }
 }
