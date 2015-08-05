@@ -1,6 +1,24 @@
-$brand-primary:         #337ab7; 
+// Colors
+$brand-primary:         #E94800;
+$brand-secondary:       #63B8CF; 
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
+$gray:                  #3D3D3D;
+$gray-dark: #464646;
 
+// General
+$page-header-border-color: transparent;
+$nav-link-hover-bg: transparent;
+
+// Layout
+$grid-float-breakpoint: 992px;
+$sidebar-width: 300px;
+
+// Type
+$headings-font-family: "Lato", sans-serif;
+$headings-font-weight: 300;
+
+$font-size-base: 16px;
+$font-size-h4: 18px;
