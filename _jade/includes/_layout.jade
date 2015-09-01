@@ -1,7 +1,7 @@
 doctype html
 html.no-js(lang='en')
   block pageVariables
-  -var menu = { 'Home': 'index.html', 'About': 'about.html', 'Blog': 'blog.html', 'Contact': 'contact.html' }
+  -var menu = { 'Home': 'index.html', 'About': 'about.html', 'Contact': 'contact.html' }
 
   head
     meta(charset="utf-8")
@@ -15,16 +15,15 @@ html.no-js(lang='en')
 
   body(class="#{bodyClass}")
     header#page_header.page-header.navbar.animated.fadeIn
-      div.container
-        div.navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse') 
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.logo-brand(href="index.html")
-            img(src='assets/img/logo.png')
-        nav.collapse.navbar-collapse.bs-navbar-collapse.pull-right
+      div
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse') 
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.logo-brand(href="index.html")
+          img(src='assets/img/logo.png')
+        nav.collapse.navbar-collapse.bs-navbar-collapse
           ul.nav.navbar-nav
             each val, key in menu
               li

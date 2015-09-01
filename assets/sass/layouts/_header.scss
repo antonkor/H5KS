@@ -1,74 +1,100 @@
-/* Global Header */
+// Global Header
 .page-header {
   margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #b4b4b5;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 0;
+  z-index: 10;
 
-  .container {
-    margin: 20px auto 15px;
+  .info-wrap {
+
+    .detail {
+      color: #E6E6E6;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 5px;
+      text-transform: uppercase;
+    }
+    .phone {
+      font-family: georgia;
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
   .logo-brand {
     display: inline-block;
-    vertical-align: top;
-    margin-left: 15px;
+    max-width: 70%;
 
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    img {
+      width: 160px;
+    }
+  }
+  .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-collapse {
+    width: 100%;
+    box-shadow: none;
+  }
+  .navbar-toggle {
+    margin: 0;
+    padding-right: 0;
   }
   .navbar-nav {
+    margin-top: -5px;
     font-size: 18px;
-  }
-}
-@include mq(mobile-only) {
-  .page-header {
-    .logo-brand {
-      height: 50px;
-      width: 70%;
-      
-      img {
-        display: block;
-        width: 100%;
-        max-width: 400px;
-        position: relative;
-        top: 50%;
-        @include transform(translateY(-50%));
-      }
+    text-align: right;
+
+    li {
+      display: block;
+    }
+    a {
+      padding: 10px 0;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }
 }
 @include mq(tablet-up) {
   .page-header {
-    .logo-brand {
-      margin-top: 5px;
-      margin-left: 0;
-
-      img {
-        height: 50px;
-      }
+    padding: 15px 50px;
+    .navbar-toggle {
+      position: absolute;
+      top: 13px;
+      right: 50px;
     }
+  }
+}
+@include mq(desktop-up) {
+  .page-header {
     .navbar-nav {
-      margin-top: 0;
+      position: absolute;
+      top: 23px;
+      right: 50px;
 
       li {
-        position: relative;
-      }
-      li:after {
-        height: 17px;
-        width: 2px;
-        content: '';
-        position: absolute;
-        top: 16px;
-        left: 0;
-        background-color: #d5d5d5;
-      }
-      li:first-child:after {
-        display: none;
-      }
+        padding-left: 10px;
+        padding-right: 10px;
 
-      li:last-child {
-        a {
-          padding-right: 0;
+        &:last-child {
+          padding-right: 0px;
+        }
+      }
+      a {
+        padding: 5px;
+        border-bottom: 1px solid transparent;
+
+        &:last-child {
+          padding-right: 0px;
+        }
+
+        &:hover {
+          border-bottom: 1px solid #CE4283;
         }
       }
     }
