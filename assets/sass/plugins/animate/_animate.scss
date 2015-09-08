@@ -16,3 +16,8 @@
   //"_zooming-exits/zooming-exits.scss",
   "_fading-entrances/fading-entrances.scss",
   "_fading-exits/fading-exits.scss";
+
+
+.fadeIn {
+  @include fadeIn();
+}
