@@ -1,5 +1,6 @@
-// Override bootstrap's variables
+// Override bootstrap's variables with Project's variables
 @import "variables";
+
 
 
 /*!
@@ -7,9 +8,6 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
-// Project vairiables
-@import "variables";
 
 // Core variables and mixins
 @import "bootstrap/variables";
