@@ -46,13 +46,14 @@
 
 
 // Vertical align anything with css3
-@mixin vertical-align {
-  position: relative;
+@mixin va($position: relative) {
+  position: $position;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+// Use: @include vertical-align();
 
 
 // Display overrides
@@ -205,6 +206,15 @@
     @media screen and (max-width: $width)  { @content; }
   }
 }
+
+@mixin large-desktop-up() { @media (min-width: 1200px) { @content; } }
+@mixin desktop-up() { @media (min-width: 992px) { @content; } }
+@mixin desktop-only() { @media (min-width: 992px) and (max-width: 1199px) { @content; } }
+@mixin tablet-up() { @media (min-width: 768px) { @content; } }
+@mixin tablet-only() { @media (min-width: 768px) and (max-width: 991px) { @content; } }
+@mixin mobile-only() { @media (max-width: 767px) { @content; } }
+@mixin custom-min($width: '') { @media screen and (min-width: $width)  { @content; } }
+@mixin custom-max($width: '') { @media screen and (max-width: $width)  { @content; } }
 
 
 // https://gist.github.com/eprothro/7309610 or

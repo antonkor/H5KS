@@ -15,7 +15,7 @@
     // All pages
     'common': {
       init: function() {
-        pushBody(false);
+        pushBody();
 
         //$('.page-header').headroom();
         $(".page-header").headroom({
@@ -112,23 +112,46 @@
 })(jQuery); // Fully reference jQuery after this point.
 
 
-$(window).on("throttledresize", function( event ) {
-  pushBody(false);
+$(window).on("debouncedresize", function( event ) {
+  pushBody();
 });
 
+enquire.register("screen and (max-width: 767px)", {
+  unmatch : function() {
+    reloadPage();
+  }
+});
+enquire.register("screen and (min-width: 768px) and (max-width: 991px)", {
+  unmatch : function() {
+    reloadPage();
+  }
+});
+enquire.register("screen and (min-width: 992px)", {
+  unmatch : function() {
+    reloadPage();
+  }
+});
+enquire.register("screen and (min-width: 1200px)", {
+  unmatch : function() {
+    reloadPage();
+  }
+});
+function reloadPage() {
+  location.reload(false);
+}
 
 
-// Header magic
+
+// Header magic for fixed headers
 function pushBody(includeSubHeader) {
-  var topNavHeight = $('.navbar-fixed-top').height();
+  var topNavHeight = $('.fixed-header').outerHeight();
 
   if(includeSubHeader === undefined) {
-    topNavHeight += $('.sub-header').height();
+    topNavHeight += $('.sub-header').outerHeight();
   }
 
   $('body').css({paddingTop: topNavHeight});
 }
-
 
 function responsiveHelpers() {
   var is_mobile = false,

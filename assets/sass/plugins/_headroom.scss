@@ -11,11 +11,11 @@
 
 }
 .headroom.headroom--not-top {
-  background-color: white;
+  //background-color: white;
 }
 .headroom.headroom--pinned {
 
 }
 .headroom.headroom--unpinned {
-  @include transform(translateY(-100%));
+  //@include transform(translateY(-100%));
 }

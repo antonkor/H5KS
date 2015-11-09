@@ -1,0 +1,47 @@
+/* Force table to not be like tables anymore */
+@media only screen and (max-width: 767px)  {
+  .table-responsive {
+    border: none;
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr { padding: 15px 0; }
+
+    td {
+      /* Behave  like a "row" */
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      padding-left: 50% !important;
+      
+      position: relative;
+      border: none;
+    }
+
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 5px;
+      left: 0;
+      width: 45%;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* Label the data. Scope AND change these */
+    td:nth-of-type(1):before { content: "Year"; }
+    td:nth-of-type(2):before { content: "Payments"; }
+    td:nth-of-type(3):before { content: "Interest"; }
+    td:nth-of-type(4):before { content: "Principal"; }
+    td:nth-of-type(5):before { content: "Ending Balance"; }
+  }
+}

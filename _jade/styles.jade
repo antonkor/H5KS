@@ -1,0 +1,63 @@
+extends ./includes/_main.jade
+block pageVariables
+  -var bodyClass = "home";
+  -var active = 'home';
+
+block pageMeta
+  meta(title="H5KS")
+  meta(description="Home")
+
+block pageHeadEnd
+  link(rel="stylesheet" href="assets/css/page-home.css")
+  style(type='text/css').
+    .btn-examples .btn {
+      margin: 0 20px 20px 0;
+    }
+    
+
+block pageBody
+  div.page-body.animated.fadeIn.delay_5s
+    .container.mt-40.mb-40
+      div
+        h2.h2 Standard Buttons
+        div.btn-examples
+          a(href="#").btn.btn-default btn-default
+          a(href="#").btn.btn-light btn-light
+          a(href="#").btn.btn-dark btn-dark
+          a(href="#").btn.btn-primary btn-primary
+          a(href="#").btn.btn-secondary btn-secondary
+          a(href="#").btn.btn-tertiary btn-tertiary
+          a(href="#").btn.btn-success btn-success
+          a(href="#").btn.btn-info btn-info
+          a(href="#").btn.btn-warning btn-warning
+          a(href="#").btn.btn-danger btn-danger
+      div
+        h2.h2 Inverse Buttons
+        div.btn-examples
+          a(href="#").btn.btn-default-inverse btn-default-inverse
+          a(href="#").btn.btn-light-inverse btn-light-inverse
+          a(href="#").btn.btn-dark-inverse btn-dark-inverse
+          a(href="#").btn.btn-primary-inverse btn-primary-inverse
+          a(href="#").btn.btn-secondary-inverse btn-secondary-inverse
+          a(href="#").btn.btn-tertiary-inverse btn-tertiary-inverse
+          a(href="#").btn.btn-success-inverse btn-success-inverse
+          a(href="#").btn.btn-info-inverse btn-info-inverse
+          a(href="#").btn.btn-warning-inverse btn-warning-inverse
+          a(href="#").btn.btn-danger-inverse btn-danger-inverse
+
+      div
+        h2.h2 Button Layouts
+        div.row.mb-20
+          div.col-xs-6
+            a(href="#").btn.btn-primary.btn-block btn-block
+          div.col-xs-6
+            a(href="#").btn.btn-secondary.btn-block btn-block
+        div.btn-group
+          a(href="#").btn.btn-primary btn-group
+          a(href="#").btn.btn-primary-inverse btn-group
+    
+
+
+    
+
+
