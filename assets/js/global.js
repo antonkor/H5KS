@@ -17,11 +17,24 @@
       init: function() {
         pushBody();
 
-        //$('.page-header').headroom();
         $(".page-header").headroom({
           "tolerance": 5,
           "offset": 205,
         });
+
+        
+        // Scroll initially if there's a hash in the url 
+        $.localScroll.hash({
+          queue:true,
+          duration:1500,
+          offset: {top: -(parseInt($('.page-header').outerHeight()))},
+        });
+        
+
+        
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
 
         // Move modals to bottom 
         $('.modal').appendTo("body");
@@ -31,22 +44,12 @@
           $('.modal:visible').length && $(document.body).addClass('modal-open');
         });
 
-
-        // Scroll initially if there's a hash in the url 
-        $.localScroll.hash({
-          target: '#content', // Could be a selector or a jQuery object too.
-          queue:true,
-          duration:1500,
-          offset: {top: -(parseInt($('body').css('paddingTop'), 10))},
-        });
-        
-
         // Scroll every hash link
         $.localScroll({
           queue:true,
           duration:1000,
           hash:false, // todo: make true and fix the initial "jump" when a hash link is clicked
-          offset: {top: -(parseInt($('body').css('paddingTop'), 10))},
+          offset: {top: -(parseInt($('.page-header').outerHeight()))},
           onBefore:function( e, anchor, $target ){
             // The 'this' is the settings object, can be modified
           },
@@ -54,9 +57,6 @@
             // The 'this' contains the scrolled element (#content)
           }
         });
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
     // Home page
@@ -112,10 +112,17 @@
 })(jQuery); // Fully reference jQuery after this point.
 
 
+
+// Fire every second of resizing browser window
+$(window).on("throttledresize", function( event ) {
+  
+});
+// Fire after 2 seconds of resizing browser window
 $(window).on("debouncedresize", function( event ) {
   pushBody();
 });
 
+// Reload page after each major breakpoint
 enquire.register("screen and (max-width: 767px)", {
   unmatch : function() {
     reloadPage();

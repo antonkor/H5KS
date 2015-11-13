@@ -1,5 +1,5 @@
 // ios fix: background scrolls
-.modal-open {
+.touch .modal-open {
 	position: fixed; 
 	width: 100%;
 
@@ -25,31 +25,33 @@
 
 
 // vertically center modal windowss
-.modal-va {
-	.no-csstransforms & {
-		.modal-content {
-			margin-top: 100px;
+@include tablet-up() {
+	.modal-va {
+		.no-csstransforms & {
+			.modal-content {
+				margin-top: 100px;
+			}
 		}
-	}
 
-	.csstransforms & {
-		height: 100%;
-	  margin-top: 0;
-	  margin-bottom: 0;
+		.csstransforms & {
+			height: 100%;
+		  margin-top: 0;
+		  margin-bottom: 0;
 
-	  > div {
-	    position: relative;
-	    top: 50%;
-	   
-	    -webkit-transform: translate3d(0, -50%, 0);
-			transform: translate3d(0, -50%, 0);
+		  > div {
+		    position: relative;
+		    top: 50%;
+		   
+		    -webkit-transform: translate3d(0, -50%, 0);
+				transform: translate3d(0, -50%, 0);
+		  }
+		}
+
+		.exit, .close {
+	  	position: absolute;
+		  top: -30px;
+		  right: 0;
+		  color: white;
 	  }
 	}
-
-	.exit, .close {
-  	position: absolute;
-	  top: -30px;
-	  right: 0;
-	  color: white;
-  }
 }

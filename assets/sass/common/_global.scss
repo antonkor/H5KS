@@ -6,6 +6,11 @@
   }
 }
 
+.break-word {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
 /* Global Styles */
 .content-section {
 

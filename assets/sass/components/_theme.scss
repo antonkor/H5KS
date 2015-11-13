@@ -139,7 +139,7 @@
   }
 }
 .btn-default-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg); }
-.btn-light-inverse { @include btn-inverse(transparent, white, white); &:hover, &:hover {color: $btn-default-bg }}
+.btn-light-inverse { @include btn-inverse(transparent, white, white); &:focus, &:hover {color: $btn-default-bg }}
 .btn-dark-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg );}
 .btn-primary-inverse { @include btn-inverse(transparent, $btn-primary-bg, $btn-primary-bg); }
 .btn-secondary-inverse { @include btn-inverse(transparent, $brand-secondary, $brand-secondary); }
