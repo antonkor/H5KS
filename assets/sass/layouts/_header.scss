@@ -49,6 +49,13 @@
       font-weight: 500;
       letter-spacing: 2px;
       text-transform: uppercase;
+
+      @include transition(all .5s ease-in-out);
+
+      &.active,
+      &:hover {
+        color: red;
+      }
     }
   }
 }

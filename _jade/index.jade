@@ -1,11 +1,10 @@
 extends ./includes/_main.jade
 block pageVariables
 	-var bodyClass = "template-main";
-	-var active = 'home';
+	-var activeMenuItem = 'Home';
 
 block pageMeta
-	meta(title="H5KS")
-	meta(description="Home")
+	meta(title="")
 
 block pageHeadEnd
 	link(rel="stylesheet" href="assets/css/page-home.css")
@@ -15,7 +14,7 @@ block pageBody
 	div.page-body.animated.fadeIn.delay_5s
 		div.jumbotron
 			div.container 
-				h1 A great template to start with for your next custom website
+				h1 A template to start with for your next custom website
 				p We use the some of the latest technologies in the front end web development world. Some of these tools are: Codekit, Compass, Jade, Sass and much more!
 				a.btn.btn-lg.btn-success(href="about.html") Learn more
 

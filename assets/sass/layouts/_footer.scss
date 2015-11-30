@@ -12,6 +12,17 @@
       display: inline-block;
       float: none;
     }
+
+    a {
+      border-bottom: 2px solid transparent;
+      
+      @include transition(all .5s ease-in-out);
+
+      &.active,
+      &:hover {
+        border-color: $brand-tertiary;
+      }
+    }
   }
 }
 @include mq(mobile-only) {
