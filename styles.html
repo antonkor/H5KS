@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta title="Page styles">
+    <meta title="AgentHero page styles">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/page-home.css">
     <style type="text/css">
+      body {
+        padding-top: 100px;
+      }
+      .h2 {
+        margin-bottom: 30px;
+      }
       .btn-examples .btn {
         margin: 0 20px 20px 0;
       }
@@ -34,22 +40,101 @@
       </div>
     </header>
     <div class="page-body animated fadeIn delay_5s">
-      <div class="container mt-40 mb-40">
-        <div>
+      <div class="mt-40 mb-40">
+        <div class="container pt-40 pt-10">
           <h2 class="h2">Standard Buttons</h2>
           <div class="btn-examples"><a href="#" class="btn btn-default">btn-default</a><a href="#" class="btn btn-light">btn-light</a><a href="#" class="btn btn-dark">btn-dark</a><a href="#" class="btn btn-primary">btn-primary</a><a href="#" class="btn btn-secondary">btn-secondary</a><a href="#" class="btn btn-tertiary">btn-tertiary</a><a href="#" class="btn btn-success">btn-success</a><a href="#" class="btn btn-info">btn-info</a><a href="#" class="btn btn-warning">btn-warning</a><a href="#" class="btn btn-danger">btn-danger</a></div>
         </div>
-        <div>
-          <h2 class="h2">Inverse Buttons</h2>
-          <div class="btn-examples"><a href="#" class="btn btn-default-inverse">btn-default-inverse</a><a href="#" class="btn btn-light-inverse">btn-light-inverse</a><a href="#" class="btn btn-dark-inverse">btn-dark-inverse</a><a href="#" class="btn btn-primary-inverse">btn-primary-inverse</a><a href="#" class="btn btn-secondary-inverse">btn-secondary-inverse</a><a href="#" class="btn btn-tertiary-inverse">btn-tertiary-inverse</a><a href="#" class="btn btn-success-inverse">btn-success-inverse</a><a href="#" class="btn btn-info-inverse">btn-info-inverse</a><a href="#" class="btn btn-warning-inverse">btn-warning-inverse</a><a href="#" class="btn btn-danger-inverse">btn-danger-inverse</a></div>
+        <div class="bg-light-grey pt-20 pb-10">
+          <div class="container mt-40">
+            <h2 class="h2">Inverse Buttons</h2>
+            <div class="btn-examples"><a href="#" class="btn btn-default-inverse">btn-default-inverse</a><a href="#" class="btn btn-light-inverse">btn-light-inverse</a><a href="#" class="btn btn-dark-inverse">btn-dark-inverse</a><a href="#" class="btn btn-primary-inverse">btn-primary-inverse</a><a href="#" class="btn btn-secondary-inverse">btn-secondary-inverse</a><a href="#" class="btn btn-tertiary-inverse">btn-tertiary-inverse</a><a href="#" class="btn btn-success-inverse">btn-success-inverse</a><a href="#" class="btn btn-info-inverse">btn-info-inverse</a><a href="#" class="btn btn-warning-inverse">btn-warning-inverse</a><a href="#" class="btn btn-danger-inverse">btn-danger-inverse</a></div>
+          </div>
         </div>
-        <div>
+        <div class="container mt-40">
           <h2 class="h2">Button Layouts</h2>
           <div class="row mb-20">
             <div class="col-xs-6"><a href="#" class="btn btn-primary btn-block">btn-block</a></div>
             <div class="col-xs-6"><a href="#" class="btn btn-secondary btn-block">btn-block</a></div>
           </div>
-          <div class="btn-group"><a href="#" class="btn btn-primary">btn-group</a><a href="#" class="btn btn-primary-inverse">btn-group</a></div>
+          <div class="btn-group btn-group-primary"><a href="#" class="btn btn-primary">btn-group</a><a href="#" class="btn btn-primary-inverse">btn-group</a></div>
+        </div>
+        <div class="container mt-40">
+          <h2 class="h2">Form Elements</h2>
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="icon icon-mail"></label>
+              <input type="text" placeholder="form-inline" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-tertiary btn-sm">Submit</button>
+          </form>
+          <div class="row mt-40 mb-20">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="icon icon-mail"></label>
+                <input type="text" placeholder="col-sm-6 with icon" class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" placeholder="col-sm-6 without icon" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row mt-40 mb-20">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <textarea type="textarea" placeholder="textarea with Autogrow plugin" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-40 mb-20">
+            <div class="col-sm-4">
+              <select style="width:100%" class="with-icon location-icon">
+                <option selected>Select2 plugin</option>
+                <option>Fort Hood, TX</option>
+                <option>Camp Lejeune, NC</option>
+                <option>Camp Pendleton, CA</option>
+                <option>Fort Lewis-McCord, WA</option>
+                <option>Fort Dix-McGuire, NJ</option>
+                <option>Fort Campbell, KY</option>
+                <option>Norfolk Navy Base, VA</option>
+                <option>Eglin AFB, FL</option>
+                <option>Fort Bragg, NC</option>
+                <option>Fort Benning, GA</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <select style="width:260px">
+                <option selected>Select without icon</option>
+                <option>Fort Hood, TX</option>
+                <option>Camp Lejeune, NC</option>
+                <option>Camp Pendleton, CA</option>
+                <option>Fort Lewis-McCord, WA</option>
+                <option>Fort Dix-McGuire, NJ</option>
+                <option>Fort Campbell, KY</option>
+                <option>Norfolk Navy Base, VA</option>
+                <option>Eglin AFB, FL</option>
+                <option>Fort Bragg, NC</option>
+                <option>Fort Benning, GA</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <select style="width:100%" class="with-search">
+                <option selected>Select with search</option>
+                <option>Fort Hood, TX</option>
+                <option>Camp Lejeune, NC</option>
+                <option>Camp Pendleton, CA</option>
+                <option>Fort Lewis-McCord, WA</option>
+                <option>Fort Dix-McGuire, NJ</option>
+                <option>Fort Campbell, KY</option>
+                <option>Norfolk Navy Base, VA</option>
+                <option>Eglin AFB, FL</option>
+                <option>Fort Bragg, NC</option>
+                <option>Fort Benning, GA</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -65,8 +150,7 @@
       </div>
     </footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><script src="assets/js/plugins.js"></script>
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/global.js"></script> 
   </body>

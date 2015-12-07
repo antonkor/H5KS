@@ -57,6 +57,9 @@
             // The 'this' contains the scrolled element (#content)
           }
         });
+
+        // autogrow textareas
+        autosize($('textarea'));
       }
     },
     // Home page
