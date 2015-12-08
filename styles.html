@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/page-home.css">
     <style type="text/css">
       body {
         padding-top: 100px;
@@ -45,6 +44,10 @@
           <h2 class="h2">Standard Buttons</h2>
           <div class="btn-examples"><a href="#" class="btn btn-default">btn-default</a><a href="#" class="btn btn-light">btn-light</a><a href="#" class="btn btn-dark">btn-dark</a><a href="#" class="btn btn-primary">btn-primary</a><a href="#" class="btn btn-secondary">btn-secondary</a><a href="#" class="btn btn-tertiary">btn-tertiary</a><a href="#" class="btn btn-success">btn-success</a><a href="#" class="btn btn-info">btn-info</a><a href="#" class="btn btn-warning">btn-warning</a><a href="#" class="btn btn-danger">btn-danger</a></div>
         </div>
+        <div class="container pt-20 pb-10">
+          <h2 class="h2">Alternate Buttons</h2>
+          <div class="btn-examples"><a href="#" class="btn btn-default-alt">btn-default-alt</a><a href="#" class="btn btn-light-alt">btn-light-alt</a><a href="#" class="btn btn-dark-alt">btn-dark-alt</a><a href="#" class="btn btn-primary-alt">btn-primary-alt</a><a href="#" class="btn btn-secondary-alt">btn-secondary-alt</a><a href="#" class="btn btn-tertiary-alt">btn-tertiary-alt</a><a href="#" class="btn btn-success-alt">btn-success-alt</a><a href="#" class="btn btn-info-alt">btn-info-alt</a><a href="#" class="btn btn-warning-alt">btn-warning-alt</a><a href="#" class="btn btn-danger-alt">btn-danger-alt</a></div>
+        </div>
         <div class="bg-light-grey pt-20 pb-10">
           <div class="container mt-40">
             <h2 class="h2">Inverse Buttons</h2>
@@ -66,7 +69,7 @@
               <label class="icon icon-mail"></label>
               <input type="text" placeholder="form-inline" class="form-control">
             </div>
-            <button type="submit" class="btn btn-tertiary btn-sm">Submit</button>
+            <button type="submit" class="btn btn-tertiary-alt btn-sm">Submit</button>
           </form>
           <div class="row mt-40 mb-20">
             <div class="col-sm-6">
@@ -82,7 +85,7 @@
             </div>
           </div>
           <div class="row mt-40 mb-20">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-offset-6">
               <div class="form-group">
                 <textarea type="textarea" placeholder="textarea with Autogrow plugin" class="form-control"></textarea>
               </div>
@@ -135,6 +138,14 @@
               </select>
             </div>
           </div>
+          <div class="row mt-60 mb-20 pt-20">
+            <div class="label-wrap col-sm-4">
+              <div class="range-label lesser text-right">Expected timeframe:</div>
+            </div>
+            <div class="col-sm-8">
+              <div id="rangeSlider" class="range-slider"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +157,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="text-muted">&reg; H5KS 2015&trade;</div>
+        <div class="text-muted">&reg; H5KS&trade; 2015</div>
       </div>
     </footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

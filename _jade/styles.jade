@@ -7,7 +7,6 @@ block pageMeta
   meta(title="AgentHero page styles")
 
 block pageHeadEnd
-  link(rel="stylesheet" href="assets/css/page-home.css")
   style(type='text/css').
     body {
       padding-top: 100px;
@@ -37,6 +36,20 @@ block pageBody
           a(href="#").btn.btn-info btn-info
           a(href="#").btn.btn-warning btn-warning
           a(href="#").btn.btn-danger btn-danger
+
+      .container.pt-20.pb-10
+        h2.h2 Alternate Buttons
+        div.btn-examples
+          a(href="#").btn.btn-default-alt btn-default-alt
+          a(href="#").btn.btn-light-alt btn-light-alt
+          a(href="#").btn.btn-dark-alt btn-dark-alt
+          a(href="#").btn.btn-primary-alt btn-primary-alt
+          a(href="#").btn.btn-secondary-alt btn-secondary-alt
+          a(href="#").btn.btn-tertiary-alt btn-tertiary-alt
+          a(href="#").btn.btn-success-alt btn-success-alt
+          a(href="#").btn.btn-info-alt btn-info-alt
+          a(href="#").btn.btn-warning-alt btn-warning-alt
+          a(href="#").btn.btn-danger-alt btn-danger-alt
 
       .bg-light-grey.pt-20.pb-10
         .container.mt-40
@@ -70,7 +83,7 @@ block pageBody
             .form-group
               label.icon.icon-mail
               input.form-control(type='text', placeholder='form-inline')
-            button.btn.btn-tertiary.btn-sm(type='submit') Submit
+            button.btn.btn-tertiary-alt.btn-sm(type='submit') Submit
         div.row.mt-40.mb-20
           div.col-sm-6
             .form-group
@@ -80,7 +93,7 @@ block pageBody
             .form-group
               input.form-control(type='text', placeholder='col-sm-6 without icon')
         div.row.mt-40.mb-20
-          div.col-sm-6
+          div.col-sm-6.col-sm-offset-6
             .form-group
               textarea.form-control(type='textarea', placeholder='textarea with Autogrow plugin')
         
@@ -124,6 +137,13 @@ block pageBody
               option Eglin AFB, FL
               option Fort Bragg, NC
               option Fort Benning, GA
+
+        div.row.mt-60.mb-20.pt-20
+          div.label-wrap.col-sm-4
+            div.range-label.lesser.text-right Expected timeframe:
+          div.col-sm-8
+            div(id="rangeSlider" class="range-slider")
+
 
     
 

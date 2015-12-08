@@ -1,0 +1,52 @@
+extends ./includes/_main.jade
+block pageVariables
+  -var bodyClass = "template-main";
+  -var activeMenuItem = '';
+
+block pageMeta
+  meta(title="AgentHero page styles")
+
+block pageHeadEnd
+  style(type='text/css').
+    body {
+      padding-top: 100px;
+    }
+    h3 {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 400;
+      font-family: sans-serif;
+      color: white;
+      margin: 10px 0;
+    }
+
+    .thumbnail {
+      padding: 0;
+    }
+    .thumbnail .caption {
+      background: #484747;
+    }
+    
+
+block pageBody
+  div.page-body.animated.fadeIn.delay_5s
+    .mt-40.mb-40
+
+      .container.pt-40.pt-10
+        .row
+          .col-sm-6.col-md-4
+            a(href="index.html")
+              .thumbnail.mb-xs-0
+                img.hidden-xs(src='./_tmp/sitemap/home.png')
+                .caption
+                  h3 Home
+          .col-sm-6.col-md-4
+            a(href="styles.html")
+              .thumbnail.mb-xs-0
+                img.hidden-xs(src='./_tmp/sitemap/styles.png')
+                .caption
+                  h3 Styles
+
+
+
+    
