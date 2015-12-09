@@ -15,7 +15,10 @@ block pageHeadEnd
       margin-bottom: 30px;
     }
     .btn-examples .btn {
-      margin: 0 20px 20px 0;
+      margin: 0 10px 10px 0;
+    }
+    .section-sm {
+      padding-bottom: 50px;
     }
     
 
@@ -78,76 +81,640 @@ block pageBody
           a(href="#").btn.btn-primary-inverse btn-group
 
       .container.mt-40
+        h2.h2 Buttons Interactive
+        div.mb-10
+          .btn-group(data-toggle='buttons')
+            label.btn.btn-secondary.active
+              input#option1(type='radio', name='options', autocomplete='off', checked='')
+              |  Radio 1 (preselected)
+            label.btn.btn-secondary
+              input#option2(type='radio', name='options', autocomplete='off')
+              |  Radio 2
+            label.btn.btn-secondary
+              input#option3(type='radio', name='options', autocomplete='off')
+              |  Radio 3
+        div.mb-10
+          .btn-group(data-toggle='buttons')
+            label.btn.btn-secondary.active
+              input(type='checkbox', autocomplete='off', checked='')
+              |  Checkbox 1 (pre-checked)
+            label.btn.btn-secondary
+              input(type='checkbox', autocomplete='off')
+              |  Checkbox 2
+            label.btn.btn-secondary
+              input(type='checkbox', autocomplete='off')
+              |  Checkbox 3
+
+        .btn-group.mb-10
+            button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Action 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider(role='separator')
+              li
+                a(href='#') Separated link
+
+        div
+          button.btn.btn-secondary(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+            | Button open window
+          #collapseExample.collapse
+            .well
+              | ...
+
+      .container.mt-40
         h2.h2 Form Elements
-        form.form-inline
-            .form-group
-              label.icon.icon-mail
-              input.form-control(type='text', placeholder='form-inline')
-            button.btn.btn-tertiary-alt.btn-sm(type='submit') Submit
-        div.row.mt-40.mb-20
+        div.row
           div.col-sm-6
             .form-group
-              label.icon.icon-mail
-              input.form-control(type='text', placeholder='col-sm-6 with icon')
+              label Email address
+              input#exampleInputEmail1.form-control(type='email', placeholder='Email')
+          div.col-sm-6
+           .form-group.has-feedback
+              label Input with Icon
+              input#inputSuccess2.form-control(type='text', aria-describedby='inputSuccess2Status')
+              span.glyphicon.glyphicon-ok.form-control-feedback(aria-hidden='true')
+              span#inputSuccess2Status.sr-only (success)
+          div.col-sm-6
+            label Dropdown
+            .form-group
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
           div.col-sm-6
             .form-group
-              input.form-control(type='text', placeholder='col-sm-6 without icon')
-        div.row.mt-40.mb-20
-          div.col-sm-6.col-sm-offset-6
-            .form-group
+              label Textarea
               textarea.form-control(type='textarea', placeholder='textarea with Autogrow plugin')
-        
-        div.row.mt-40.mb-20
-          div.col-sm-4
-            select.with-icon.location-icon(style='width:100%')
-              option(selected) Select2 plugin
-              option Fort Hood, TX
-              option Camp Lejeune, NC
-              option Camp Pendleton, CA
-              option Fort Lewis-McCord, WA
-              option Fort Dix-McGuire, NJ
-              option Fort Campbell, KY
-              option Norfolk Navy Base, VA
-              option Eglin AFB, FL
-              option Fort Bragg, NC
-              option Fort Benning, GA
-          div.col-sm-4
-            select(style='width:260px')
-              option(selected) Select without icon
-              option Fort Hood, TX
-              option Camp Lejeune, NC
-              option Camp Pendleton, CA
-              option Fort Lewis-McCord, WA
-              option Fort Dix-McGuire, NJ
-              option Fort Campbell, KY
-              option Norfolk Navy Base, VA
-              option Eglin AFB, FL
-              option Fort Bragg, NC
-              option Fort Benning, GA
-          div.col-sm-4
-            select.with-search(style='width:100%')
-              option(selected) Select with search
-              option Fort Hood, TX
-              option Camp Lejeune, NC
-              option Camp Pendleton, CA
-              option Fort Lewis-McCord, WA
-              option Fort Dix-McGuire, NJ
-              option Fort Campbell, KY
-              option Norfolk Navy Base, VA
-              option Eglin AFB, FL
-              option Fort Bragg, NC
-              option Fort Benning, GA
+          div.col-sm-6
+            label Select displayed
+            .form-group
+              select.form-control(multiple='')
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
 
-        div.row.mt-60.mb-20.pt-20
-          div.label-wrap.col-sm-4
-            div.range-label.lesser.text-right Expected timeframe:
-          div.col-sm-8
-            div(id="rangeSlider" class="range-slider")
+          div.col-sm-6
+            .form-group
+              select.with-icon(style='width:100%')
+                option(selected) Select2 plugin
+                option Fort Hood, TX
+                option Camp Lejeune, NC
+                option Camp Pendleton, CA
+                option Fort Lewis-McCord, WA
+                option Fort Dix-McGuire, NJ
+                option Fort Campbell, KY
+                option Norfolk Navy Base, VA
+                option Eglin AFB, FL
+                option Fort Bragg, NC
+                option Fort Benning, GA
+          div.col-sm-6
+            .form-group
+              select(style='width:100%')
+                option(selected) Select without icon
+                option Fort Hood, TX
+                option Camp Lejeune, NC
+                option Camp Pendleton, CA
+                option Fort Lewis-McCord, WA
+                option Fort Dix-McGuire, NJ
+                option Fort Campbell, KY
+                option Norfolk Navy Base, VA
+                option Eglin AFB, FL
+                option Fort Bragg, NC
+                option Fort Benning, GA
+          div.col-sm-6
+            .form-group
+              select.with-search(style='width:100%')
+                option(selected) Select with search
+                option Fort Hood, TX
+                option Camp Lejeune, NC
+                option Camp Pendleton, CA
+                option Fort Lewis-McCord, WA
+                option Fort Dix-McGuire, NJ
+                option Fort Campbell, KY
+                option Norfolk Navy Base, VA
+                option Eglin AFB, FL
+                option Fort Bragg, NC
+                option Fort Benning, GA
 
 
-    
+  .container.theme-showcase(role='main')
+    div.section-sm
+      h2.h2 Typography
+      div.mb-50
+        div Headings
+        h1 h1. Bootstrap heading
+        h2 h2. Bootstrap heading
+        h3 h3. Bootstrap heading
+        h4 h4. Bootstrap heading
+        h5 h5. Bootstrap heading
+        h6 h6. Bootstrap heading
+      div.mb-50
+        div Lead
+        p.lead Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+      div.mb-50
+        div address
+        address
+          strong Twitter, Inc.
+          br
+          |   1355 Market Street, Suite 900
+          br
+          |   San Francisco, CA 94103
+          br
+          abbr(title='Phone') P:
+          |  (123) 456-7890
 
+    div.section-sm
+      h2.h2 Breadcrumbs
+      ol.breadcrumb
+        li.active Home
 
-    
+      ol.breadcrumb
+        li
+          a(href='#') Home
+        li.active Library
 
+      ol.breadcrumb
+        li
+          a(href='#') Home
+        li
+          a(href='#') Library
+        li.active Data
 
+    div.section-sm
+      h2.h2 pagination
+      nav
+        ul.pagination.pagination-lg
+          li.disabled
+            a(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+          li.active
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#', aria-label='Next')
+              span(aria-hidden='true') »
+      nav
+        ul.pagination
+          li.disabled
+            a(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+          li.active
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#', aria-label='Next')
+              span(aria-hidden='true') »
+      nav
+        ul.pagination.pagination-sm
+          li.disabled
+            a(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+          li.active
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#', aria-label='Next')
+              span(aria-hidden='true') »
+
+    div.section-sm
+      h2.h2 Pager
+      nav
+        ul.pager
+          li
+            a(href='#') Previous
+          li
+            a(href='#') Next
+      nav
+        ul.pager
+          li.previous
+            a(href='#')
+              span(aria-hidden='true') ←
+              |  Older
+          li.next
+            a(href='#')
+              | Newer 
+              span(aria-hidden='true') →
+
+    div.section-sm
+      h2.h2 Buttons Labels
+      div.mb-10
+        span.label.label-default.mr-10 Default
+        span.label.label-primary.mr-10 Primary
+        span.label.label-success.mr-10 Success
+        span.label.label-info.mr-10 Info
+        span.label.label-warning.mr-10 Warning
+        span.label.label-danger Danger
+
+    div.section-sm
+      h2.h2 Buttons Badges
+      p
+        a(href='#')
+          | Inbox 
+          span.badge 42
+      ul.nav.nav-pills(role='tablist')
+        li.active(role='presentation')
+          a(href='#')
+            | Home 
+            span.badge 42
+        li(role='presentation')
+          a(href='#') Profile
+        li(role='presentation')
+          a(href='#')
+            | Messages 
+            span.badge 3
+
+    div.section-sm
+      h2.h2 Thumbnails
+      .row
+        .col-xs-6.col-md-3
+          a.thumbnail(href='#')
+            img(src='http://placehold.it/350x300', alt='...')
+        .col-xs-6.col-md-3
+          a.thumbnail(href='#')
+            img(src='http://placehold.it/350x300', alt='...')
+        .col-xs-6.col-md-3
+          a.thumbnail(href='#')
+            img(src='http://placehold.it/350x300', alt='...')
+        .col-xs-6.col-md-3
+          a.thumbnail(href='#')
+            img(src='http://placehold.it/350x300', alt='...')
+
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='http://placehold.it/350x300', alt='...')
+            .caption
+              h3 Thumbnail label
+              p ...
+              a.btn.btn-success(href='#', role='button') Button
+
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='http://placehold.it/350x300', alt='...')
+            .caption
+              h3 Thumbnail label
+              p ...
+              a.btn.btn-success(href='#', role='button') Button
+
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='http://placehold.it/350x300', alt='...')
+            .caption
+              h3 Thumbnail label
+              p ...
+              a.btn.btn-success(href='#', role='button') Button
+
+    div.section-sm
+      h2.h2 Buttons Alerts
+      .alert.alert-success.alert-dismissible(role='alert')
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+          span(aria-hidden='true') ×
+        strong Warning!
+        |  Better check yourself, you're not looking too good.
+
+      .alert.alert-info.alert-dismissible(role='alert')
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+          span(aria-hidden='true') ×
+        strong Warning!
+        |  Better check yourself, you're not looking too good.
+
+      .alert.alert-warning.alert-dismissible(role='alert')
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+          span(aria-hidden='true') ×
+        strong Warning!
+        |  Better check yourself, you're not looking too good.
+
+      .alert.alert-danger.alert-dismissible(role='alert')
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+          span(aria-hidden='true') ×
+        strong Warning!
+        |  Better check yourself, you're not looking too good.
+
+    div.section-sm
+      h2.h2 Buttons Progress bars
+      .progress
+        .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
+          span.sr-only 60% Complete
+      .progress
+        .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+          span.sr-only 40% Complete (success)
+      .progress
+        .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+          span.sr-only 20% Complete
+      .progress
+        .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+          span.sr-only 60% Complete (warning)
+      .progress
+        .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+          span.sr-only 80% Complete (danger)
+      .progress
+        .progress-bar.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+          span.sr-only 60% Complete
+      .progress
+        .progress-bar.progress-bar-success(style='width: 35%')
+          span.sr-only 35% Complete (success)
+        .progress-bar.progress-bar-warning(style='width: 20%')
+          span.sr-only 20% Complete (warning)
+        .progress-bar.progress-bar-danger(style='width: 10%')
+          span.sr-only 10% Complete (danger)
+
+    div.section-sm
+      h2.h2 Buttons List groups
+      .row
+      .col-sm-4
+        ul.list-group
+          li.list-group-item Cras justo odio
+          li.list-group-item Dapibus ac facilisis in
+          li.list-group-item Morbi leo risus
+          li.list-group-item Porta ac consectetur ac
+          li.list-group-item Vestibulum at eros
+      // /.col-sm-4
+      .col-sm-4
+        .list-group
+          a.list-group-item.active(href='#')
+            | Cras justo odio
+          a.list-group-item(href='#') Dapibus ac facilisis in
+          a.list-group-item(href='#') Morbi leo risus
+          a.list-group-item(href='#') Porta ac consectetur ac
+          a.list-group-item(href='#') Vestibulum at eros
+      // /.col-sm-4
+      .col-sm-4
+        .list-group
+          a.list-group-item.active(href='#')
+            h4.list-group-item-heading List group item heading
+            p.list-group-item-text
+              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+          a.list-group-item(href='#')
+            h4.list-group-item-heading List group item heading
+            p.list-group-item-text
+              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+          a.list-group-item(href='#')
+            h4.list-group-item-heading List group item heading
+            p.list-group-item-text
+              | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+      // /.col-sm-4
+
+    div.section-sm
+      h2.h2 Buttons Panels
+      .panel.panel-default
+        .panel-body
+          | Basic panel example
+      .row
+        .col-sm-4
+          .panel.panel-default
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+          .panel.panel-primary
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+        .col-sm-4
+          .panel.panel-success
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+          .panel.panel-info
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+        .col-sm-4
+          .panel.panel-warning
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+          .panel.panel-danger
+            .panel-heading
+              h3.panel-title Panel title
+            .panel-body
+              | Panel content
+
+    div.section-sm
+      h2.h2 Wells
+      .well.well-lg
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+      .well
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+      .well.well-sm
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+    div.section-sm
+      h2.h2 Tables
+      .row
+        .col-md-6
+          table.table
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+        .col-md-6
+          table.table.table-striped
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+      .row
+        .col-md-6
+          table.table.table-bordered
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td(rowspan='2') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td Mark
+                td Otto
+                td @TwBootstrap
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+        .col-md-6
+          table.table.table-condensed
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+
+    div.section-sm
+      h2.h2 Accordion
+      #accordion.panel-group(role='tablist', aria-multiselectable='true')
+        .panel.panel-default
+          #headingOne.panel-heading(role='tab')
+            h4.panel-title
+              a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                | Collapsible Group Item #1
+          #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .panel.panel-default
+          #headingTwo.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                | Collapsible Group Item #2
+          #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .panel.panel-default
+          #headingThree.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                | Collapsible Group Item #3
+          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+    div.section-sm
+      h2.h2 Tabs
+      div
+        ul.nav.nav-tabs(role='tablist')
+          li.active(role='presentation')
+            a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Home
+          li(role='presentation')
+            a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Profile
+          li(role='presentation')
+            a(href='#messages', aria-controls='messages', role='tab', data-toggle='tab') Messages
+        // Tab panes
+        .tab-content
+          #home.tab-pane.active(role='tabpanel') Home
+          #profile.tab-pane(role='tabpanel') Profile
+          #messages.tab-pane(role='tabpanel') Message
+
+    div.section-sm
+      h2.h2 Modals
+      button.btn.btn-success.btn-lg(type='button', data-toggle='modal', data-target='#myModal')
+        | Launch demo modal
+      #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+              h4#myModalLabel.modal-title Modal title
+            .modal-body
+              | ...
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Close
+              button.btn.btn-primary(type='button') Save changes
+
+    div.section-sm
+      h2.h2 Buttons Carousel
+      #carousel-example-generic.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          li(data-target='#carousel-example-generic', data-slide-to='1')
+          li(data-target='#carousel-example-generic', data-slide-to='2')
+        .carousel-inner(role='listbox')
+          .item.active
+            img(src="http://lorempixel.com/1141/500/city")
+          .item
+            img(src="http://lorempixel.com/1139/500/city")
+          .item
+            img(src="http://lorempixel.com/1142/500/city")
+        a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+          span.sr-only Previous
+        a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+          span.sr-only Next
