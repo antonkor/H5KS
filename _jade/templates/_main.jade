@@ -1,0 +1,60 @@
+doctype html
+html.no-js(lang='en')
+  block pageVariables
+  -var topMenu = { 'Home': 'index.html', 'About': 'about.html', 'Contact': 'contact.html' }
+
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    block pageMeta
+    meta(name="viewport",content="width=device-width, minimum-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="assets/css/bootstrap.css")
+    link(rel="stylesheet" href="assets/css/main.css")
+    block pageHeadEnd
+    script(src="assets/js/vendors/modernizr-2.6.2-respond-1.1.0.min.js")
+
+  body(class="#{bodyClass}")
+    header#page_header.page-header.fixed-header.animated.fadeIn
+      div
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar_collapse') 
+          span.sr-only Toggle navigation
+          span.icon-bar.top-bar
+          span.icon-bar.middle-bar
+          span.icon-bar.bottom-bar
+        a.logo-brand(href="index.html")
+          img(src='assets/img/logo.png')
+        nav#navbar_collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            each val, key in topMenu
+              li
+                if activeMenuItem === key
+                  a.active(href=val, title=key)= key
+                else
+                  a(href=val, title=key)= key
+            
+    block pageBody
+
+    footer.page-footer.animated.fadeIn.text-center
+      div.container
+        ul.nav.list-inline
+          li
+            a(href="index.html") Home
+          li
+            a(href="about.html") About
+          li
+            a(href="blog.html") Blog
+          li
+            a(href="contact.html") Contact
+        div.text-muted &reg; H5KS&trade; 2015
+
+
+    
+        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    block pageFooterScripts
+
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/global.js"></script> 
