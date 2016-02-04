@@ -2079,74 +2079,30 @@ a:hover, a:focus {
     .page-footer .container .nav li:nth-child(2):after {
       display: none; } }
 .page-header {
-  margin: 0;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  z-index: 10; }
-  .page-header.fixed-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%; }
+  width: 100%;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0px;
+  z-index: 1000; }
+  .page-header .navbar-toggle {
+    margin: 0px 15px 0 0;
+    padding-right: 0px;
+    top: 10px; }
+    .page-header .navbar-toggle .icon-bar {
+      background-color: black; }
   .page-header .logo-brand {
     display: inline-block;
-    max-width: 70%; }
+    width: 70%; }
     .page-header .logo-brand img {
-      width: 160px; }
-  .page-header .icon-bar {
-    background-color: #fff; }
-  .page-header .navbar-collapse {
-    width: 100%;
-    box-shadow: none; }
-  .page-header .navbar-toggle {
-    float: none;
-    margin: 0;
-    padding-right: 0; }
+      margin-left: 15px; }
   .page-header .navbar-nav {
-    margin-top: -5px;
-    font-size: 18px;
+    background-color: #fff;
     text-align: right; }
     .page-header .navbar-nav li {
       display: block; }
-    .page-header .navbar-nav a {
-      padding: 10px 0;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      -webkit-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out; }
-      .page-header .navbar-nav a.active, .page-header .navbar-nav a:hover {
-        color: red; }
 
-@media (min-width: 768px) {
-  .page-header {
-    padding: 15px 50px; }
-    .page-header .navbar-toggle {
-      position: absolute;
-      top: 13px;
-      right: 50px; } }
-@media (min-width: 992px) {
-  .page-header .navbar-nav {
-    position: absolute;
-    top: 23px;
-    right: 50px; }
-    .page-header .navbar-nav li {
-      padding-left: 10px;
-      padding-right: 10px; }
-      .page-header .navbar-nav li:last-child {
-        padding-right: 0px; }
-    .page-header .navbar-nav a {
-      padding: 5px;
-      border-bottom: 1px solid transparent; }
-      .page-header .navbar-nav a:last-child {
-        padding-right: 0px; }
-      .page-header .navbar-nav a:hover {
-        border-bottom: 1px solid #CE4283; } }
 /* Utilities */
 /* ========================================== */
 /* Utility classes */
