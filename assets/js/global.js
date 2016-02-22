@@ -45,7 +45,7 @@
         });
 
         // Scroll every hash link
-        $.localScroll({
+        $('.local-scroll').localScroll({
           queue:true,
           duration:1000,
           hash:false, // todo: make true and fix the initial "jump" when a hash link is clicked
