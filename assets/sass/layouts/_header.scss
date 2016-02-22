@@ -1,102 +1,34 @@
 // Global Header
 .page-header {
-  margin: 0;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.50);
-  border-radius: 0;
-  z-index: 10;
+  width: 100%;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  .navbar-toggle {
+    margin: 0px 15px 0 0;
+    padding-right: 0px;
+    top: 10px;
 
-  &.fixed-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .logo-brand {
-    display: inline-block;
-    max-width: 70%;
-
-    img {
-      width: 160px;
+    .icon-bar {
+      background-color: black;
     }
   }
-  .icon-bar {
-    background-color: #fff;
-  }
-  .navbar-collapse {
-    width: 100%;
-    box-shadow: none;
-  }
-  .navbar-toggle {
-    float: none;
-    margin: 0;
-    padding-right: 0;
+  .logo-brand {
+    display: inline-block;
+    width: 70%;
+    img {
+      margin-left: 15px;
+    }
   }
   .navbar-nav {
-    margin-top: -5px;
-    font-size: 18px;
+    background-color: #fff;
     text-align: right;
 
     li {
       display: block;
-    }
-    a {
-      padding: 10px 0;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      @include transition(all .5s ease-in-out);
-
-      &.active,
-      &:hover {
-        color: red;
-      }
-    }
-  }
-}
-@include mq(tablet-up) {
-  .page-header {
-    padding: 15px 50px;
-    
-    .navbar-toggle {
-      position: absolute;
-      top: 13px;
-      right: 50px;
-    }
-  }
-}
-@include mq(desktop-up) {
-  .page-header {
-    .navbar-nav {
-      position: absolute;
-      top: 23px;
-      right: 50px;
-
-      li {
-        padding-left: 10px;
-        padding-right: 10px;
-
-        &:last-child {
-          padding-right: 0px;
-        }
-      }
-      a {
-        padding: 5px;
-        border-bottom: 1px solid transparent;
-
-        &:last-child {
-          padding-right: 0px;
-        }
-
-        &:hover {
-          border-bottom: 1px solid #CE4283;
-        }
-      }
     }
   }
 }
