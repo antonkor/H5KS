@@ -38,6 +38,15 @@
   @include display-lg("flex");
 }
 
+
+// Alignment
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 // Control spacing
 .mt-0  { margin-top: 0 !important; }
 .mt-5  { margin-top: 5px !important; }
