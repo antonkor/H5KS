@@ -7,14 +7,20 @@ body {
 
 }
 
+// Reset links
 a:hover, a:focus {
   text-decoration: none;
 }
 
-h1, h2, h3 { 
 
-}
+// General heading style
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  //color: #4C5463;
+} 
 
+
+// Font sizes
 .h1 {
   font-size: 28px;
   text-transform: uppercase;
@@ -56,4 +62,10 @@ h1, h2, h3 {
   .h4 {
 
   }
+}
+
+
+// Heading styles
+.heading-fancy {
+
 }

@@ -20,6 +20,7 @@
   text-shadow: none;
   text-transform: uppercase;
   @include transition(all .3s ease-in-out);
+  font-weight: bold;
 
   // Remove the gradient for the pressed/active state
   &:active,
@@ -66,7 +67,8 @@
   color: $text-color;
 
   &:hover,
-  &:focus  {
+  &:focus,
+  &:active  {
     background-color: darken($bg-color, 8%);
     border-color: darken($border-color, 8%);
     color: $text-color;
