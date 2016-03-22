@@ -1,34 +1,51 @@
-// Global Header
 .page-header {
-  width: 100%;
-  margin: 0px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin: 0;
+  padding: 20px 0;
   position: fixed;
-  top: 0px;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 1000;
-  .navbar-toggle {
-    margin: 0px 15px 0 0;
-    padding-right: 0px;
-    top: 10px;
 
-    .icon-bar {
-      background-color: black;
-    }
-  }
   .logo-brand {
     display: inline-block;
-    width: 70%;
+
     img {
-      margin-left: 15px;
+      height: 50px;
     }
   }
-  .navbar-nav {
-    background-color: #fff;
-    text-align: right;
+  .navbar-toggle {
+    .icon-bar {
+      background-color: #F07D6E;
+    }
+  }
+  .navbar-collapse {
+    background: #fff;
 
-    li {
-      display: block;
+    .nav {
+      text-align: center;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+@include mq(tablet-up) {
+  .page-header {
+    .navbar-collapse {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+@include mq(desktop-up) {
+  .page-header {
+    .navbar-collapse {
+      position: static;
+      float: right;
+      background: transparent;
     }
   }
 }
