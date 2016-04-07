@@ -136,7 +136,7 @@ enquire.register("screen and (min-width: 768px) and (max-width: 991px)", {
     reloadPage();
   }
 });
-enquire.register("screen and (min-width: 992px)", {
+enquire.register("screen and (min-width: 992px) and (max-width: 1199px)", {
   unmatch : function() {
     reloadPage();
   }
