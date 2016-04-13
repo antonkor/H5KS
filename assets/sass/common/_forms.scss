@@ -1,6 +1,8 @@
 
 // reset ios input styling
-input[type="text"], textarea {
+input[type="text"],
+input[type="submit"], 
+textarea {
   -webkit-appearance:none;  
   -webkit-border-radius:0px;
 }

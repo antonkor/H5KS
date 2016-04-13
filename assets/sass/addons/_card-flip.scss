@@ -1,0 +1,55 @@
+$card-height: 100px;
+$card-width: 100px;
+
+
+.card-flip-wrap {
+  display: inline-block;
+}
+.cf-inner {
+  height: $card-height;
+  width: $card-width;
+  position: relative;
+ 
+  z-index: 2;
+
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  
+  .cf-front,
+  .cf-back {
+    display: block;
+    content: '';
+    height: $card-height;
+    width: $card-width;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: $card-width $card-height;
+    background-repeat: no-repeat;
+
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    backface-visibility:hidden;
+  }
+
+  .cf-front {
+    z-index: 2;
+    @include rotateY(0);
+
+    background-color: #91CA64;
+    //background-image: url(../img/image.png);
+  }
+  
+  .cf-back {
+    @include rotateY(180deg);
+
+    background-color: #478CCA;
+    //background-image: url(../img/image-hover.png);
+  }
+  
+
+  .card-flip-wrap:hover &,
+  &.active {
+    @include rotateY(180deg);
+  }
+}

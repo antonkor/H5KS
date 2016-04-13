@@ -15,18 +15,29 @@
     }
   }
   .navbar-toggle {
-    .icon-bar {
-      background-color: #F07D6E;
-    }
+    margin: 0;
+    border: 0;
+    border-radius: 0;
   }
   .navbar-collapse {
     background: #fff;
+
+    
 
     .nav {
       text-align: center;
 
       li {
         display: block;
+      }
+    }
+  }
+}
+@include mobile-only() {
+  .page-header {
+    .navbar-collapse {
+      .navbar-nav {
+        height: 100vh !important;
       }
     }
   }

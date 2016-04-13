@@ -3,7 +3,7 @@ $brand-primary:         #F4721E; // primary orange
 $brand-primary-dark:    #C15625; // darker orange
 $brand-secondary:       #50a54c; // primary green
 $brand-secondary-dark:  #006E41; // darker green
-$brand-tertiary:        #015360; // teal
+$brand-tertiary:        #478CCA; // dark blue
 
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
@@ -12,9 +12,18 @@ $brand-danger:          #d9534f;
 $gray:                  #3D3D3D;
 $gray-dark:             #333333;
 
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #474747;
-$btn-default-border:             #474747;
+$btn-default-color:     #333 !default;
+$btn-default-bg:        $brand-primary;
+$btn-default-border:    #474747;
+
+$btn-dark-bg:           $gray-dark;
+$btn-dark-border:       $gray-dark;
+
+
+
+
+
+
 
 // General
 $page-header-border-color: transparent;

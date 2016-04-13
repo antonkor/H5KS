@@ -19,7 +19,7 @@
 
         $(".page-header").headroom({
           "tolerance": 5,
-          "offset": 205,
+          //"offset": 205,
         });
 
         
@@ -56,6 +56,12 @@
           onAfter:function( anchor, settings ){
             // The 'this' contains the scrolled element (#content)
           }
+        });
+
+        // open/ close hamburger menu
+        $('.navbar-toggle').click(function() {
+          $('body').toggleClass('modal-open menu-open');
+          $('.hamburger-icon').toggleClass('active');
         });
 
         // autogrow textareas

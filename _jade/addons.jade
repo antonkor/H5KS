@@ -1,0 +1,47 @@
+extends ./templates/_main.jade
+block pageVariables
+  -var bodyClass = "template-main";
+  -var activeMenuItem = '';
+
+block pageMeta
+  meta(title="H5KS | Addons")
+
+block pageHeadEnd
+  style(type='text/css').
+    body {
+      padding-top: 100px;
+    }
+    .h2 {
+      margin-bottom: 30px;
+    }
+    .btn-examples .btn {
+      margin: 0 10px 10px 0;
+    }
+    .section-sm {
+      padding-bottom: 50px;
+    }
+    
+
+block pageBody
+  div.page-body.animated.fadeIn.delay-xxs
+
+    
+      
+    .container 
+      div.section-sm
+        h2.h2 Card flip
+        h4.h4
+        .row
+          .col-sm-4
+            .card-flip-wrap
+              .cf-inner
+                .cf-front(style="")
+                .cf-back(style="")
+          .col-sm-4
+            .card-flip-wrap
+              .cf-inner.active
+                .cf-front(style="")
+                .cf-back(style="")
+
+    
+    

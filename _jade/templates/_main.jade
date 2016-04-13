@@ -1,7 +1,7 @@
 doctype html
 html.no-js(lang='en')
   block pageVariables
-  -var topMenu = { 'Home': 'index.html', 'About': 'about.html', 'Contact': 'contact.html' }
+  -var topMenu = { 'Home': 'index.html', 'Styles': 'styles.html', 'Layouts': 'layouts.html', 'Addons': 'addons.html', 'Sitemap': 'sitemap.html' }
 
   head
     meta(charset="utf-8")
@@ -18,9 +18,11 @@ html.no-js(lang='en')
       div.container
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar_collapse') 
           span.sr-only Toggle navigation
-          span.icon-bar.top-bar
-          span.icon-bar.middle-bar
-          span.icon-bar.bottom-bar
+          i.hamburger-icon
+            span.line.line-1
+            span.line.line-2
+            span.line.line-3
+
         a.logo-brand(href="index.html")
           img(src='assets/img/logo.png')
         nav#navbar_collapse.collapse.navbar-collapse
@@ -40,12 +42,12 @@ html.no-js(lang='en')
           li
             a(href="index.html") Home
           li
-            a(href="about.html") About
+            a(href="styles.html") Styles
           li
-            a(href="blog.html") Blog
+            a(href="addons.html") Addons
           li
-            a(href="contact.html") Contact
-        div.text-muted &reg; H5KS&trade; 2015
+            a(href="sitemap.html") Sitemap
+        div.text-muted &reg; H5KS&trade; 2016
 
 
     
