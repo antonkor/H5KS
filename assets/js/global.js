@@ -24,11 +24,7 @@
 
         
         // Scroll initially if there's a hash in the url 
-        $.localScroll.hash({
-          queue:true,
-          duration:1500,
-          offset: {top: -(parseInt($('.page-header').outerHeight()))},
-        });
+        // add velocity scrollTo if needed
         
 
         
@@ -45,18 +41,7 @@
         });
 
         // Scroll every hash link
-        $('.local-scroll').localScroll({
-          queue:true,
-          duration:1000,
-          hash:false, // todo: make true and fix the initial "jump" when a hash link is clicked
-          offset: {top: -(parseInt($('.page-header').outerHeight()))},
-          onBefore:function( e, anchor, $target ){
-            // The 'this' is the settings object, can be modified
-          },
-          onAfter:function( anchor, settings ){
-            // The 'this' contains the scrolled element (#content)
-          }
-        });
+        // add velocity scrollTo if needed
 
         // open/ close hamburger menu
         $('.navbar-toggle').click(function() {
