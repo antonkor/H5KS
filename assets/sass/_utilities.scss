@@ -213,21 +213,21 @@
 // Max width helpers
 .max-xs {
   max-width: 90%;
-  @include mq(tablet-up) { max-width: 60%; }
   margin-right: auto;
   margin-left: auto;
+  @include mq(tablet-up) { max-width: 60%; }
 }
 .max-sm {
   max-width: 90%;
-  @include mq(tablet-up) { max-width: 70%; }
   margin-right: auto;
   margin-left: auto;
+  @include mq(tablet-up) { max-width: 70%; }
 }
 .max-md {
   max-width: 90%;
-  @include mq(tablet-up) { max-width: 80%; }
   margin-right: auto;
   margin-left: auto;
+  @include mq(tablet-up) { max-width: 80%; }
 }
 .max-lg {
   max-width: 90%;
