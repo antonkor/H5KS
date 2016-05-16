@@ -1,0 +1,2 @@
+# disable Search engines from indexing the site (remove for live deployment)
+Header set X-Robots-Tag "noindex, nofollow"
