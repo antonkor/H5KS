@@ -3,16 +3,22 @@
 // --------------------------------------------------
 // Common styles
 .btn {
+  background-image: none;
+  border-radius: 0px;
+  box-shadow: none;
+
+  //font-family: $font-primary;
+  letter-spacing: 2.25px;
+
   text-shadow: none;
   text-transform: uppercase;
   @include transition(all .3s ease-in-out);
-  font-weight: bold;
 
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
     background-image: none;
-    @include box-shadow(inset 0 1px 7px rgba(0, 0, 0, 0.25));
+    @include box-shadow(none);
   }
   &:focus {
     outline: none !important;
@@ -27,20 +33,25 @@
   }
 }
 
-
 // Size adjustments
 .btn {
-  padding: 10px 32px;
-  font-size: 14px;
+  padding: 14px 30px 12px;
+  font-size: 16px;
 }
 .btn-xs {
-
+  font-size: 12px;
+  font-weight: 300;
 }
 .btn-sm {
+  padding: 8px 20px 7px;
+  font-size: 14px;
+}
+.btn-md {
 
 }
 .btn-lg {
-
+  padding: 20px 45px;
+  font-size: 18px;
 }
 
 
@@ -51,17 +62,17 @@
   color: $text-color;
 
   &:hover,
-  &:focus,
-  &:active  {
-    background-color: darken($bg-color, 8%);
-    border-color: darken($border-color, 8%);
+  &:focus  {
+    background-color: lighten($bg-color, 8%);
+    border-color: lighten($border-color, 8%);
     color: $text-color;
+    text-decoration: none;
   }
 
   &:active,
   &.active {
-    background-color: darken($bg-color, 8%);
-    border-color: darken($border-color, 8%);
+    background-color: lighten($bg-color, 8%);
+    border-color: lighten($border-color, 8%);
   }
 
   &.disabled,
@@ -73,14 +84,16 @@
     &.focus,
     &:active,
     &.active {
-      background-color: darken($bg-color, 12%);
+      background-color: lighten($bg-color, 15%);
     }
   }
+
 }
 // Apply the mixin to the buttons
-.btn-default { @include btn-styles($btn-default-bg, $btn-default-bg);}
+.btn { @include btn-styles(transparent, transparent, #696969 );}
+.btn-default { @include btn-styles(#D7DCE1, #D7DCE1, black );}
 .btn-light { @include btn-styles(#fff, #fff, #333);}
-.btn-dark { @include btn-styles($btn-dark-bg, $btn-dark-bg);}
+.btn-dark { @include btn-styles($btn-default-bg, $btn-default-bg);}
 .btn-primary { @include btn-styles($btn-primary-bg, $btn-primary-bg); }
 .btn-secondary { @include btn-styles($brand-secondary, $brand-secondary); }
 .btn-tertiary { @include btn-styles($brand-tertiary, $brand-tertiary); }
@@ -89,22 +102,13 @@
 .btn-warning { @include btn-styles($btn-warning-bg, $btn-warning-bg); }
 .btn-danger  { @include btn-styles($btn-danger-bg, $btn-danger-bg); }
 
-.btn-default-alt { @include btn-styles(darken($btn-default-bg, 20%), $btn-default-bg);}
-.btn-light-alt { @include btn-styles(darken(#fff, 20%), #fff, #333);}
-.btn-dark-alt { @include btn-styles(darken($btn-dark-bg, 20%), $btn-dark-bg);}
-.btn-primary-alt { @include btn-styles(darken($btn-primary-bg, 20%), $btn-primary-bg); }
-.btn-secondary-alt { @include btn-styles(darken($brand-secondary, 20%), $brand-secondary); }
-.btn-tertiary-alt { @include btn-styles(darken($brand-tertiary, 20%), $brand-tertiary); }
-
-
-
 
 // inverted buttons
 @mixin btn-inverse($bg-color: #555, $border-color: #555, $text-color: #FFF) {
   background-color: $bg-color;
   border-color: $border-color;
+  border-width: 2px;
   color: $text-color;
-  font-weight: bold;
 
   &:hover,
   &:focus  {
@@ -132,7 +136,7 @@
     }
   }
 }
-.btn-default-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg); }
+.btn-default-inverse { @include btn-inverse(transparent, #D7DCE1, $gray-dark); border-width: 1px; }
 .btn-light-inverse { @include btn-inverse(transparent, white, white); &:focus, &:hover {color: $btn-default-bg }}
 .btn-dark-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg );}
 .btn-primary-inverse { @include btn-inverse(transparent, $btn-primary-bg, $btn-primary-bg); }
@@ -144,31 +148,136 @@
 .btn-danger-inverse  { @include btn-inverse(transparent, $btn-danger-bg, $btn-danger-bg); }
 
 
+// Alt buttons
+@mixin btn-link($color: #333, $hover-color: lighten($color, 8%) ) {
+  padding: 0 1px;
+  border-bottom: 1px dashed $color;
+  //font-family: $font-primary;
+  letter-spacing: 0px;
+  color: $color;
+  text-transform: initial;
 
-
-/*
-// General
-
-.btn-default {
-  background-color: #fff;
-  border: 1px solid #fff !important;
-  color: #676767;
-  font-size: 12px;
-
-  &:hover {
-    background-color: #f1f1f1 !important;
-    border: 1px solid #f1f1f1 !important;
-  }
-  &.btn-inverse {
-    background-color: transparent;
-    border: 1px solid #fff !important;
-    color: #fff;
-    font-weight: 300;
-
-    &:hover, &:focus {
-      color: #fff !important;
-      background-color: transparent !important;
-    }
+  &:hover,
+  &:focus {
+    border-bottom: 1px dashed $hover-color;
+    color: $hover-color;
   }
 }
-*/
+.btn-link { @include btn-link(#696969, black) }
+.btn-primary-link { @include btn-link($brand-primary) }
+.btn-secondary-link { @include btn-link($brand-secondary) }
+.btn-tertiary-link { @include btn-link($brand-tertiary) }
+.btn-link-alt {
+  border: none;
+  //font-family: $font-primary;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin btn-borderless($color: $brand-primary, $hover-color: lighten($color, 8%) ) {
+  border: 0;
+  background-color: transparent;
+  color: $color;
+  padding: 0 1px;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &:active,
+  &.active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+.btn-borderless { @include btn-borderless(#696969, black); }
+.btn-primary-borderless { @include btn-borderless($brand-primary); }
+.btn-secondary-borderless { @include btn-borderless($brand-secondary); }
+
+// Button Group
+.btn-group {
+  @include flexbox();
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+    @include mq(tablet-up) { padding: 13px 20px; }
+    border: 2px solid #D1D1D1;
+    border-right: none;
+    //font-family: $font-primary;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-right: 2px solid #D1D1D1;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    &:hover {
+      border-color: #94918E;
+
+      .lesser {
+        color: #fff;
+      }
+    }
+    &.active {
+      color: #fff;
+
+      .lesser {
+        color: #fff;
+      }
+    }
+  }
+  .lesser {
+    @include transition(all .3s ease-in-out);
+    color: $brand-tertiary;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+
+// Button rows
+.btn-row {
+  margin-left: -10px;
+  margin-right: -10px;
+
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include clearfix();
+
+}
+
+
+
+.btn-group-fixed-fluid {
+  @include clearfix();
+  
+  .btn-fixed-sm {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .btn-fixed-sm + .btn-fluid {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 70px);
+    float: right;
+  }
+}
+
+

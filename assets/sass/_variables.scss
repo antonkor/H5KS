@@ -1,29 +1,40 @@
-// Colors
-$brand-primary:         #F4721E; // primary orange
-$brand-primary-dark:    #C15625; // darker orange
-$brand-secondary:       #50a54c; // primary green
-$brand-secondary-dark:  #006E41; // darker green
-$brand-tertiary:        #478CCA; // dark blue
+// Typography
+$font-primary: 'Avenir W01', sans-serif;
+$book: 300;
+$roman: 400;
+$medium: 500;
+$heavy: 800;
 
-$brand-success:         #5cb85c;
+$font-secondary: 'Leitura W01 Display';
+$font-tertiary: 'Bebas Neue W01';
+
+// Colors
+$brand-primary:         #FDC50E;
+$brand-primary-dark:    $brand-primary;
+$brand-secondary:       #283748;
+$brand-secondary-dark:  $brand-secondary;
+$brand-secondary-alt:   #3B5169;
+$brand-tertiary:        #5694DF;
+
+$brand-success:         #4FA75D;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
+$gray-lighter:          #B0B4BA;
+$gray-light:            #D7DCE1;
 $gray:                  #3D3D3D;
-$gray-dark:             #333333;
+$gray-dark:             #696969;
+$black:                 #000000;
+$white:                 #ffffff;
 
-$btn-default-color:     #333 !default;
-$btn-default-bg:        $brand-primary;
-$btn-default-border:    #474747;
+$state-success-text: $brand-success;
+$state-info-text: $brand-warning;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
 
-$btn-dark-bg:           $gray-dark;
-$btn-dark-border:       $gray-dark;
-
-
-
-
-
-
+$btn-default-color:              #696969 !default;
+$btn-default-bg:                 #000;
+$btn-default-border:             #5694DF;
 
 // General
 $page-header-border-color: transparent;
