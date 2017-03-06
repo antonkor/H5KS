@@ -1,6 +1,0 @@
-define(["jquery",], function($) {
-    
-    $(function() {
-        
-    });
-});
