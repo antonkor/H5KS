@@ -2,7 +2,9 @@
         Build Icons Task
 *******************************/
 
-var gulp          = require('gulp');
+var gulp          = require('gulp'),
+    iconfont      = require('gulp-iconfont'),
+    iconfontCss   = require('gulp-iconfont-css');
 // var runTimestamp = Math.round(Date.now()/1000);
 // var fontName = 'font-icons';
 

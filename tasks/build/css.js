@@ -2,20 +2,23 @@
           Build CSS Task
 *******************************/
 
-var
-  gulp          = require('gulp'),
+var gulp        = require('gulp'),
   autoprefixer  = require('gulp-autoprefixer'),
-  iconfont      = require('gulp-iconfont'),
-  iconfontCss   = require('gulp-iconfont-css'),
-  sourcemaps    = require('gulp-sourcemaps'),
+  browserSync   = require('browser-sync').create(),
+  debug         = require('gulp-debug'),
+  notify        = require('gulp-notify'),
+  plumber       = require('gulp-plumber'),
   sass          = require('gulp-sass'),
-  sassGlob      = require('gulp-sass-glob');
+  sassGlob      = require('gulp-sass-glob'),
+  sourcemaps    = require('gulp-sourcemaps');
+
+
 
 
 
 // Compile SASS to CSS
 gulp.task('css', function () {
-	return gulp.src(paths.sass)
+	return gulp.src('./src/sass/**/*.+(sass|scss)')
 		.pipe(sourcemaps.init())
 		.pipe(debug({title: 'Sass:'}))
 		.pipe(plumber({errorHandler: notify.onError({Error: '<%= error.message %>', sound : 'Bottle'})}))
@@ -28,13 +31,13 @@ gulp.task('css', function () {
         "Android >= 4",
         "Chrome >= 20",
         "Firefox >= 24",
-        "Explorer >= 8",
+        "Explorer >= 10",
         "iOS >= 6",
         "Opera >= 12",
         "Safari >= 6"
       ]}))
-		.pipe(sourcemaps.write('./'))
+		.pipe(sourcemaps.write('./dist/assets/css/'))
 		.pipe(plumber.stop())
-		.pipe(gulp.dest(paths.css))
+		.pipe(gulp.dest('./dist/assets/css/'))
 		.pipe(browserSync.stream({match: '**/*.css'}));
 });

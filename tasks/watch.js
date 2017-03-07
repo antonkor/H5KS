@@ -5,11 +5,11 @@
 var gulp          = require('gulp'),
     browserSync   = require('browser-sync').create(),
     reload        = browserSync.reload,
-    debug         = require('gulp-debug');
+    debug         = require('gulp-debug'),
 		path          = require('path'),
-		plumber       = require('gulp-plumber'),
-		runSequence   = require('run-sequence'),
-		notify        = require('gulp-notify');
+		//plumber       = require('gulp-plumber'),
+		runSequence   = require('run-sequence');
+    //gulpif        = require('gulp-if')
 
 
 // Watch all files and reload browswer

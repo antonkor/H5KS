@@ -1,4 +1,3 @@
-@import "compass";
 @import "mixins";
 @import "variables";
 @import "bootstrap/variables";
@@ -16,9 +15,6 @@
 @import "addons/*";
 @import "layouts/*";
 
-body {
-  display: none
-}
 
 /* Utilities */
 @import "utilities";
