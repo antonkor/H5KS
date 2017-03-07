@@ -1,4 +1,4 @@
-extends ./templates/_main.jade
+extends ./templates/_main.pug
 block pageVariables
   -var bodyClass = "template-main";
   -var activeMenuItem = '';
@@ -20,14 +20,14 @@ block pageHeadEnd
     .section-sm {
       padding-bottom: 50px;
     }
-    
+
 
 block pageBody
   div.page-body.animated.fadeIn.delay-xxs
 
-    
-      
-    .container 
+
+
+    .container
       div.section-sm
         h2.h2 Card flip
         h4.h4
@@ -42,6 +42,3 @@ block pageBody
               .cf-inner.active
                 .cf-front(style="")
                 .cf-back(style="")
-
-    
-    

@@ -1,4 +1,4 @@
-extends ./templates/_main.jade
+extends ./templates/_main.pug
 block pageVariables
   -var bodyClass = "template-main";
   -var activeMenuItem = '';
@@ -20,19 +20,15 @@ block pageHeadEnd
     .section-sm {
       padding-bottom: 50px;
     }
-    
+
 
 block pageBody
   div.page-body.animated.fadeIn.delay-xxs
 
-    
-      
-    .container 
+
+
+    .container
       div.section-sm
         .text-center.mt-50.mb-50
-          h2.h2 Layouts coming soon 
+          h2.h2 Layouts coming soon
           h4.h4 (hero sections, split content boxes, ect.)
-        
-
-    
-    

@@ -1,4 +1,4 @@
-extends ./templates/_main.jade
+extends ./templates/_main.pug
 block pageVariables
   -var bodyClass = "template-main";
   -var activeMenuItem = '';
@@ -26,7 +26,7 @@ block pageHeadEnd
     .thumbnail .caption {
       background: #484747;
     }
-    
+
 
 block pageBody
   div.page-body.animated.fadeIn.delay-xxs
@@ -46,7 +46,3 @@ block pageBody
                 img.hidden-xs(src='./_tmp/sitemap/styles.png')
                 .caption
                   h3 Styles
-
-
-
-    

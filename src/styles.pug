@@ -1,4 +1,4 @@
-extends ./templates/_main.jade
+extends ./templates/_main.pug
 block pageVariables
   -var bodyClass = "template-main";
   -var activeMenuItem = '';
@@ -19,7 +19,7 @@ block pageHeadEnd
     .section-sm {
       padding-bottom: 50px;
     }
-    
+
 
 block pageBody
   div.page-body.animated.fadeIn.delay-xxs
@@ -104,7 +104,7 @@ block pageBody
 
         .btn-group.mb-10
             button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Action 
+              | Action
               span.caret
             ul.dropdown-menu
               li
@@ -320,7 +320,7 @@ block pageBody
               |  Older
           li.next
             a(href='#')
-              | Newer 
+              | Newer
               span(aria-hidden='true') →
 
     div.section-sm
@@ -337,18 +337,18 @@ block pageBody
       h2.h2 Buttons Badges
       p
         a(href='#')
-          | Inbox 
+          | Inbox
           span.badge 42
       ul.nav.nav-pills(role='tablist')
         li.active(role='presentation')
           a(href='#')
-            | Home 
+            | Home
             span.badge 42
         li(role='presentation')
           a(href='#') Profile
         li(role='presentation')
           a(href='#')
-            | Messages 
+            | Messages
             span.badge 3
 
     div.section-sm

@@ -1,4 +1,4 @@
-extends ./templates/_main.jade
+extends ./templates/_main.pug
 block pageVariables
   -var bodyClass = "template-main home";
   -var activeMenuItem = 'Home';
@@ -14,15 +14,15 @@ block pageBody
   div.page-body.animated.fadeIn.delay-xxs
     div.jumbotron
       div.container
-        div.mw-90 
-          h1.h1 Kickstart your next HTML5 project
+        div.mw-90
+          h1.h1 Kickstart your next HTML5 projects
           p Bootstrap 3, Compass, Jade, Sass, and much more!
-          p Suggested Tools: 
+          p Suggested Tools:
           ul
-            li Plain Text Editor: <a href="https://www.sublimetext.com/">SublimeText</a> 
-            li Sass Compiler (OS X) <a href="https://incident57.com/codekit/">Codekit</a> 
+            li Plain Text Editor: <a href="https://www.sublimetext.com/">SublimeText</a>
+            li Sass Compiler (OS X) <a href="https://incident57.com/codekit/">Codekit</a>
             li Sass Compiler (Windows) <a href="https://prepros.io">Prespros</a>
-          
+
 
   div.container
     div.row
