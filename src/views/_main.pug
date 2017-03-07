@@ -1,0 +1,65 @@
+doctype html
+html.no-js(lang='en')
+  block pageVariables
+  -var topMenu = { 'Home': 'index.html', 'Styles': 'styles.html', 'Layouts': 'layouts.html', 'Addons': 'addons.html', 'Sitemap': 'sitemap.html' }
+
+
+  head
+    meta(charset="utf-8")
+    meta(name="robots", content="noindex,nofollow")
+
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    block pageMeta
+    meta(name="viewport",content="width=device-width, minimum-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="assets/css/bootstrap.css")
+    link(rel="stylesheet" href="assets/css/main.css")
+    block pageHeadEnd
+    script(src="assets/js/vendors/modernizr-2.6.2-respond-1.1.0.min.js")
+
+
+    body(class="#{bodyClass}")
+      header#page_header.page-header.fixed-header.animated.fadeIn
+        div.container
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar_collapse')
+            span.sr-only Toggle navigation
+            i.hamburger-icon
+              span.line.line-1
+              span.line.line-2
+              span.line.line-3
+
+          a.logo-brand(href="index.html")
+            img(src='assets/img/logo.png')
+          nav#navbar_collapse.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              each val, key in topMenu
+                li
+                  if activeMenuItem === key
+                    a.active(href=val, title=key)= key
+                  else
+                    a(href=val, title=key)= key
+
+    block pageBody
+    footer.page-footer.animated.text-center.fadeIn.delay-sm
+      div.container
+        ul.nav.list-inline
+          li
+            a(href="index.html") Home
+          li
+            a(href="styles.html") Styles
+          li
+            a(href="addons.html") Addons
+          li
+            a(href="sitemap.html") Sitemap
+        div.text-muted &reg; H5KS&trade; 2017
+
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="./assets/js/vendors/jquery-1.10.2.min.js"><\\/script>')
+    script(src='./assets/js/vendors/bootstrap.min.js')
+
+
+    block pageFooterScripts
+    script(src='./assets/js/plugins.js')
+    script(src='./assets/js/plugins/swiper.min.js')
+    script(src='./assets/js/global.js')

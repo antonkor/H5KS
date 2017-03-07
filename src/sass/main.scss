@@ -16,7 +16,9 @@
 @import "addons/*";
 @import "layouts/*";
 
-
+body {
+  display: none
+}
 
 /* Utilities */
 @import "utilities";
@@ -32,4 +34,3 @@
 // 3. make sure to add .ir or .iir sub-class to .i-close
 // 4. profit (Not, don't use sprites anymore, use icon-fonts!)
 // 5. learn how to use svg sprites
-

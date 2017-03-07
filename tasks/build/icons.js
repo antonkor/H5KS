@@ -1,5 +1,5 @@
 /*******************************
-            Set-up
+        Build Icons Task
 *******************************/
 
 var gulp          = require('gulp');

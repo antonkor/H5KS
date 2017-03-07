@@ -1,6 +1,8 @@
-extends ./templates/_main.pug
+extends ./_main.pug
+
+
 block pageVariables
-  -var bodyClass = "template-main home";
+  -var bodyClass = "page-home";
   -var activeMenuItem = 'Home';
 
 block pageMeta
@@ -15,13 +17,8 @@ block pageBody
     div.jumbotron
       div.container
         div.mw-90
-          h1.h1 Kickstart your next HTML5 projects
-          p Bootstrap 3, Compass, Jade, Sass, and much more!
-          p Suggested Tools:
-          ul
-            li Plain Text Editor: <a href="https://www.sublimetext.com/">SublimeText</a>
-            li Sass Compiler (OS X) <a href="https://incident57.com/codekit/">Codekit</a>
-            li Sass Compiler (Windows) <a href="https://prepros.io">Prespros</a>
+          h1.h1 Kickstart your next HTML5 project
+          p Using Bootstrap and Gulp
 
 
   div.container

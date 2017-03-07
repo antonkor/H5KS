@@ -26,7 +26,7 @@ gulp.task('browser-sync', ['html'], function() {
   gulp.watch(['./src/**/*.pug'], ['html']);
 	gulp.watch('**/*.html').on('change', reload);
 
-  gulp.watch(paths.allSass, ['css']);
+  //gulp.watch(paths.allSass, ['css']);
 	//gulp.watch('assets/css/**/*.css').on('change', browserSync.reload);
 
 	gulp.watch('assets/js/**/*.js').on('change', browserSync.reload);
