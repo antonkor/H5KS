@@ -2,8 +2,7 @@
 _psd/**
 assets/sass/.sass-cache
 node_modules/**
-package.json
-Gruntfile.js
+
 
 *.psd
 *.diff
