@@ -2,7 +2,8 @@
             Set-up
 *******************************/
 
-var gulp          = require('gulp');
+var gulp          = require('gulp'),
+		path          = require('path');
 		//gulpif        = require('gulp-if'),
 
 
