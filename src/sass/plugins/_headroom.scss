@@ -1,9 +1,5 @@
 .headroom {
-  @include transition(transform .4s ease);
-  -webkit-animation-fill-mode: none;
-  -moz-animation-fill-mode: none;
-  -ms-animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+  transition: transform .4s ease-in-out;
   animation-fill-mode: none;
 }
 

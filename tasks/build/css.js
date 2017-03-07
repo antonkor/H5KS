@@ -2,28 +2,26 @@
           Build CSS Task
 *******************************/
 
-var gulp        = require('gulp'),
-  autoprefixer  = require('gulp-autoprefixer'),
-  browserSync   = require('browser-sync').create(),
-  debug         = require('gulp-debug'),
-  notify        = require('gulp-notify'),
-  plumber       = require('gulp-plumber'),
-  sass          = require('gulp-sass'),
-  sassGlob      = require('gulp-sass-glob'),
-  sourcemaps    = require('gulp-sourcemaps');
-
-
+var gulp       = require('gulp'),
+  autoprefixer = require('gulp-autoprefixer'),
+  browserSync  = require('browser-sync').create(),
+  debug        = require('gulp-debug'),
+  notify       = require('gulp-notify'),
+  plumber      = require('gulp-plumber'),
+  sass         = require('gulp-sass'),
+  sassGlob     = require('gulp-sass-glob'),
+  sourcemaps   = require('gulp-sourcemaps');
 
 
 
 // Compile SASS to CSS
-gulp.task('css', function () {
+gulp.task('build-css', function () {
 	return gulp.src('./src/sass/**/*.+(sass|scss)')
 		.pipe(sourcemaps.init())
-		.pipe(debug({title: 'Sass:'}))
+		//.pipe(debug({title: 'Sass:'}))
 		.pipe(plumber({errorHandler: notify.onError({Error: '<%= error.message %>', sound : 'Bottle'})}))
 		.pipe(sassGlob())
-		.pipe(sass().on('error', sass.logError))
+		//.pipe(sass().on('error', sass.logError))
 		.pipe(sass( {outputStyle: 'expanded'} ))
 		.pipe(autoprefixer({
       browsers: [
@@ -36,7 +34,7 @@ gulp.task('css', function () {
         "Opera >= 12",
         "Safari >= 6"
       ]}))
-		.pipe(sourcemaps.write('./dist/assets/css/'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest('./dist/assets/css/'))
 		.pipe(browserSync.stream({match: '**/*.css'}));

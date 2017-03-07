@@ -1,4 +1,3 @@
-@import "compass";
 @import "mixins";
 @import "variables";
 @import "bootstrap/variables";
@@ -19,7 +18,7 @@ Pages styles
   .container  {
     //background: url('../img/tracer-hero.png') no-repeat center top;
 
-    
+
   }
 }
 @include mq(tablet-up) {

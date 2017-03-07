@@ -12,13 +12,13 @@
 
   text-shadow: none;
   text-transform: uppercase;
-  @include transition(all .3s ease-in-out);
+  transition: all .3s ease-in-out;
 
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
     background-image: none;
-    @include box-shadow(none);
+    box-shadow: none;
   }
   &:focus {
     outline: none !important;
@@ -26,7 +26,7 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    @include box-shadow(none);
+    box-shadow: none;
   }
   .badge {
     text-shadow: none;
@@ -235,49 +235,10 @@
     }
   }
   .lesser {
-    @include transition(all .3s ease-in-out);
+    transition: all .3s ease-in-out;
     color: $brand-tertiary;
     font-size: 10px;
     font-weight: 600;
     text-align: center;
   }
 }
-
-
-// Button rows
-.btn-row {
-  margin-left: -10px;
-  margin-right: -10px;
-
-  [class*="col-"] {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  @include clearfix();
-
-}
-
-
-
-.btn-group-fixed-fluid {
-  @include clearfix();
-  
-  .btn-fixed-sm {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    float: left;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .btn-fixed-sm + .btn-fluid {
-    display: inline-block;
-    vertical-align: middle;
-    width: calc(100% - 70px);
-    float: right;
-  }
-}
-
-

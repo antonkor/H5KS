@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "page-home.css"
-}
+{"version":3,"sources":["page-home.scss"],"names":[],"mappings":"AAMA;;wCAEwC;AAKxC;;wCAEwC;AAkBxC;;wCAEwC","file":"page-home.css","sourcesContent":["@import \"mixins\";\n@import \"variables\";\n@import \"bootstrap/variables\";\n\n\n\n/* =====================================\nPartials\n===================================== */\n\n\n\n\n/* =====================================\nPages styles\n===================================== */\n.hero-section {\n  .container  {\n    //background: url('../img/tracer-hero.png') no-repeat center top;\n\n\n  }\n}\n@include mq(tablet-up) {\n  .hero-section {\n    .container  {\n\n    }\n  }\n}\n\n\n\n/* =====================================\nPlugins\n===================================== */\n"]}

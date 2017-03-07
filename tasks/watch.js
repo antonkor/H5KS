@@ -1,19 +1,14 @@
 /*******************************
-            Set-up
+        Watch and reload
 *******************************/
 
 var gulp          = require('gulp'),
-    browserSync   = require('browser-sync').create(),
-    reload        = browserSync.reload,
-    debug         = require('gulp-debug'),
-		path          = require('path'),
-		//plumber       = require('gulp-plumber'),
-		runSequence   = require('run-sequence');
+    browserSync   = require('browser-sync').create();
     //gulpif        = require('gulp-if')
 
 
 // Watch all files and reload browswer
-gulp.task('browser-sync', ['html'], function() {
+gulp.task('browser-sync', ['build-html'], function() {
 
 	browserSync.init({
 		proxy: "localhost/h5ks/dist",
@@ -23,12 +18,12 @@ gulp.task('browser-sync', ['html'], function() {
 	});
 
 
-  gulp.watch(['./src/**/*.pug'], ['html']);
-	gulp.watch('**/*.html').on('change', reload);
+  gulp.watch(['./src/**/*.pug'], ['buld-html']);
+	gulp.watch('./dist/**/*.html').on('change', browserSync.reload);
 
-  //gulp.watch(paths.allSass, ['css']);
-	//gulp.watch('assets/css/**/*.css').on('change', browserSync.reload);
+  gulp.watch(['./src/sass/**/*.+(sass|scss)'], ['build-css']);
+	gulp.watch('./dist/assets/css/**/*.css').on('change', browserSync.reload);
 
-	gulp.watch('assets/js/**/*.js').on('change', browserSync.reload);
+	gulp.watch('dist/assets/js/**/*.js').on('change', browserSync.reload);
 
 });

@@ -3,13 +3,12 @@
 *******************************/
 
 var
-  gulp       = require('gulp'),
-  fs         = require('fs'),
-  pug        = require('gulp-pug');
+  gulp = require('gulp'),
+  pug  = require('gulp-pug');
 
 
 //Compile Pug
-gulp.task('html', function(done) {
+gulp.task('build-html', function(done) {
   gulp.src('./src/views/**/!(_)*.pug')
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
