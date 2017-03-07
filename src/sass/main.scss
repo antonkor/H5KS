@@ -22,15 +22,3 @@ body {
 
 /* Utilities */
 @import "utilities";
-
-
-/* Global Sprite Maps */
-// how to use sprite
-// 1. first import sprite folder
-//$global-sprite: sprite-map("sprites/global/*.png", $spacing: 10px);
-//$gs2x: sprite-map("sprites@2x/global/*.png", $spacing: 10px);
-// 2. add sprite to class
-//.i-close { @include retina-sprite($global-sprite, $gs2x, i-close); }
-// 3. make sure to add .ir or .iir sub-class to .i-close
-// 4. profit (Not, don't use sprites anymore, use icon-fonts!)
-// 5. learn how to use svg sprites
