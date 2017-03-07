@@ -18,7 +18,7 @@ gulp.task('browser-sync', ['build-html'], function() {
 	});
 
 
-  gulp.watch(['./src/**/*.pug'], ['buld-html']);
+  gulp.watch(['./src/**/*.pug'], ['build-html']);
 	gulp.watch('./dist/**/*.html').on('change', browserSync.reload);
 
   gulp.watch(['./src/sass/**/*.+(sass|scss)'], ['build-css']);
