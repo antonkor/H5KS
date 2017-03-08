@@ -5,7 +5,7 @@
 var gulp         = require('gulp');
 
 
-var watch        = require('./tasks/watch'),
+var serve        = require('./tasks/serve'),
 	  buildHTML    = require('./tasks/build/html'),
 		buildCSS     = require('./tasks/build/css');
 	  buildJS      = require('./tasks/build/javascript'),
