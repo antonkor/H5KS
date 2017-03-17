@@ -1,14 +1,23 @@
 // Typography
-$font-primary: '', sans-serif;
+$font-size-base: 16px;
+$font-size-h4: 18px;
+
+$font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-secondary: '';
 $font-tertiary: '';
 
 
-// Custom font weights
-$book: 300;
-$roman: 400;
-$medium: 500;
-$heavy: 800;
+// Headings
+$headings-font-family:    $font-secondary;
+$headings-font-weight:    900;
+$headings-line-height:    1;
+$headings-color: #454545;
+
+
+// Colors
+$body-bg: #fff;
+$text-color: #8A8A89;
+
 
 
 // Colors
@@ -44,12 +53,7 @@ $page-header-border-color: transparent;
 $nav-link-hover-bg: transparent;
 
 // Layout
-$grid-float-breakpoint: 992px; // never hide humbugur
+//$grid-float-breakpoint: 992px; // never hide humbugur
 $sidebar-width: 300px;
 
-// Type
-//$headings-font-family: "Lato", sans-serif;
-$headings-font-weight: 300;
 
-$font-size-base: 16px;
-$font-size-h4: 18px;

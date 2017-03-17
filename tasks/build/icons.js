@@ -2,31 +2,26 @@
         Build Icons Task
 *******************************/
 
-var gulp          = require('gulp'),
-    iconfont      = require('gulp-iconfont'),
-    iconfontCss   = require('gulp-iconfont-css');
-// var runTimestamp = Math.round(Date.now()/1000);
-// var fontName = 'font-icons';
+var gulp      = require('gulp'),
+    svgSprite = require("gulp-svg-sprites");
 
 
+gulp.task('build-icons', function () {
+  return gulp.src('src/icons/*.svg')
+    .pipe(svgSprite({
+      //mode: "sprite",
+      cssFile:    'assets/css/icons-sprite.css',
+      svg: {
+        sprite: 'assets/svg/icons-sprite.svg',
+        defs: 'assets/svg/icons-def.svg',
+        symbols: 'assets/svg/icons-symbols.svg'
+      },
+      svgPath: '../../%f',
 
-
-// Build icons into icon font file
-
-// gulp.task('iconfont', function(){
-//   gulp.src(paths.icons_src)
-//     .pipe(iconfontCss({
-//       fontName: fontName,
-//       path: 'assets/sass/icons/_template.scss',
-//       targetPath: '../sass/icons/_icons.scss',
-//       fontPath: '../fonts/'
-//     }))
-//     .pipe(iconfont({
-//       fontName: fontName,
-//       normalize: true,
-//       //prependUnicode: false, // recommended option: true
-//       formats: ['ttf', 'eot', 'woff'],
-//       //timestamp: runTimestamp, // recommended to get consistent builds when watching files
-//      }))
-//     .pipe(gulp.dest(paths.icons_dest));
-// });
+      //templates: { scss: true }
+      preview: {
+        sprite: 'icons-sprite.html'
+      }
+    }))
+    .pipe(gulp.dest("dist"));
+});

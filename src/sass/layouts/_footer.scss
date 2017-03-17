@@ -15,8 +15,7 @@
 
     a {
       border-bottom: 2px solid transparent;
-      
-      @include transition(all .5s ease-in-out);
+      transition: all .5s ease-in-out;
 
       &.active,
       &:hover {

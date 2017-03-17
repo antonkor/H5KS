@@ -4,40 +4,6 @@
 /* Utility classes */
 /* ======================================== */
 
-// Display helpers 
-@include display("block");
-@include display("inline-block");
-@include display("inline");
-@include display("flex");
-
-@include mq(mobile-only) {
-  @include display-xs("block");
-  @include display-xs("inline-block");
-  @include display-xs("inline");
-  @include display-xs("flex");
-}
-
-@include mq(tablet-up) {
-  @include display-sm("block");
-  @include display-sm("inline-block");
-  @include display-sm("inline");
-  @include display-sm("flex");
-}
-
-@include mq(desktop-up) {
-  @include display-md("block");
-  @include display-md("inline-block");
-  @include display-md("inline");
-  @include display-md("flex");
-}
-
-@include mq(large-desktop-up) {
-  @include display-lg("block");
-  @include display-lg("inline-block");
-  @include display-lg("inline");
-  @include display-lg("flex");
-}
-
 
 // Alignment
 .align-center {
@@ -65,20 +31,6 @@ $i: 0;
   $i: $i + 5;
 }
 
-
-// No padding
-@include no-padding("left");
-@include no-padding("right");
-@include no-padding("top");
-@include no-padding("bottom");
-@include no-padding("all");
-
-// No margin
-@include no-margin("left");
-@include no-margin("right");
-@include no-margin("top");
-@include no-margin("bottom");
-@include no-margin("all");
 
 
 
@@ -175,37 +127,5 @@ $i: 0;
 .delay-md { @include animation-delay(1.5s); }
 .delay-lg { @include animation-delay(2s); }
 
-
-
-
-/* Text/ Image Replacement */
-.ir {  
-  display: block;
-  vertical-align: top;
-  position: relative; 
-  border: 0; 
-  text-indent: -999em; 
-  overflow: hidden; 
-  background-color: transparent; 
-  background-repeat: no-repeat; 
-  text-align: left; 
-  direction: ltr; 
-  *line-height: 0; 
-}
-.ir br { 
-  display: none; 
-}
-.iir { 
-  display: inline-block;
-  vertical-align: top;
-  position: relative; 
-  border: 0; 
-  text-indent: -999em; 
-  overflow: hidden; 
-  background-color: transparent; 
-  background-repeat: no-repeat; 
-  text-align: left; 
-  direction: ltr; //*line-height: 0; *display: inline; *zoom: 1;
-} 
 
 

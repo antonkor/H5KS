@@ -197,7 +197,7 @@
 
 // Button Group
 .btn-group {
-  @include flexbox();
+  display: flex;
 
   .btn {
     width: 100%;

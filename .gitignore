@@ -1,5 +1,4 @@
 # Numerous always-ignore extensions
-_psd/**
 assets/sass/.sass-cache
 node_modules/**
 

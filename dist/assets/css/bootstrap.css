@@ -323,7 +323,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857;
-  color: #696969;
+  color: #8A8A89;
   background-color: #fff;
 }
 
@@ -420,10 +420,10 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: inherit;
-  font-weight: 300;
-  line-height: 1.1;
-  color: inherit;
+  font-family: "";
+  font-weight: 900;
+  line-height: 1;
+  color: #454545;
 }
 
 h1 small,
@@ -728,7 +728,7 @@ dd {
   clear: both;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -2448,7 +2448,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: darkgray;
+  color: #c9c9c9;
 }
 
 @media (min-width: 768px) {
@@ -3176,7 +3176,7 @@ tbody.collapse.in {
   margin-bottom: 2px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -3742,7 +3742,7 @@ tbody.collapse.in {
   clear: both;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar {
     border-radius: 4px;
   }
@@ -3757,7 +3757,7 @@ tbody.collapse.in {
   clear: both;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-header {
     float: left;
   }
@@ -3786,7 +3786,7 @@ tbody.collapse.in {
   overflow-y: auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -3830,7 +3830,7 @@ tbody.collapse.in {
   margin-left: -15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -3845,7 +3845,7 @@ tbody.collapse.in {
   border-width: 0 0 1px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -3859,7 +3859,7 @@ tbody.collapse.in {
   z-index: 1030;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -3893,7 +3893,7 @@ tbody.collapse.in {
   display: block;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
@@ -3928,7 +3928,7 @@ tbody.collapse.in {
   margin-top: 4px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
@@ -3944,7 +3944,7 @@ tbody.collapse.in {
   line-height: 22px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -3967,7 +3967,7 @@ tbody.collapse.in {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4044,7 +4044,7 @@ tbody.collapse.in {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -4053,7 +4053,7 @@ tbody.collapse.in {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -4100,7 +4100,7 @@ tbody.collapse.in {
   margin-bottom: 14px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-text {
     float: left;
     margin-left: 15px;
@@ -4108,7 +4108,7 @@ tbody.collapse.in {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-left {
     float: left !important;
   }
@@ -4180,7 +4180,7 @@ tbody.collapse.in {
   color: #555;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
@@ -4279,7 +4279,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #fff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #090909;
   }
@@ -4662,7 +4662,7 @@ a.badge:hover, a.badge:focus {
 
 .thumbnail .caption {
   padding: 9px;
-  color: #696969;
+  color: #8A8A89;
 }
 
 a.thumbnail:hover,
