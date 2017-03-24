@@ -33,7 +33,7 @@ gulp.task('build-svg-sprite', function () {
 var fontName = 'iconfont';
 
 gulp.task('build-iconfont', function(){
-  gulp.src(['src/icons/icon-font/*.svg'])
+  gulp.src(['src/icons/icon-font/*.svg'], {base: 'src/'})
     .pipe(iconfontCss({
       fontName: fontName,
       path: 'src/sass/plugins/_iconfont-template.scss',
