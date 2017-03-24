@@ -8,7 +8,7 @@
   box-shadow: none;
 
   //font-family: $font-primary;
-  letter-spacing: 2.25px;
+  //letter-spacing: 0px;
 
   text-shadow: none;
   text-transform: uppercase;
@@ -136,7 +136,7 @@
     }
   }
 }
-.btn-default-inverse { @include btn-inverse(transparent, #D7DCE1, $gray-dark); border-width: 1px; }
+.btn-default-inverse { @include btn-inverse(transparent, #D7DCE1, $gray-dark); }
 .btn-light-inverse { @include btn-inverse(transparent, white, white); &:focus, &:hover {color: $btn-default-bg }}
 .btn-dark-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg );}
 .btn-primary-inverse { @include btn-inverse(transparent, $btn-primary-bg, $btn-primary-bg); }

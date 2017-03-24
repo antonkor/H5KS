@@ -1,0 +1,117 @@
+@font-face {
+	font-family: "iconfont";
+	src: url('../fonts/icons/iconfont.eot');
+	src: url('../fonts/icons/iconfont.eot?#iefix') format('eot'),
+		url('../fonts/icons/iconfont.woff2') format('woff2'),
+		url('../fonts/icons/iconfont.woff') format('woff'),
+		url('../fonts/icons/iconfont.ttf') format('truetype'),
+		url('../fonts/icons/iconfont.svg#iconfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == caret-left {
+		$char: "\E001";
+	}
+	@if $filename == caret-right {
+		$char: "\E002";
+	}
+	@if $filename == experience {
+		$char: "\E003";
+	}
+	@if $filename == households {
+		$char: "\E004";
+	}
+	@if $filename == integrity {
+		$char: "\E005";
+	}
+	@if $filename == performance {
+		$char: "\E006";
+	}
+	@if $filename == recommendations {
+		$char: "\E007";
+	}
+	@if $filename == s-fb {
+		$char: "\E008";
+	}
+	@if $filename == s-in {
+		$char: "\E009";
+	}
+	@if $filename == s-li {
+		$char: "\E00A";
+	}
+	@if $filename == s-tw {
+		$char: "\E00B";
+	}
+	@if $filename == technology {
+		$char: "\E00C";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-caret-left {
+	@include icon(caret-left);
+}
+.icon-caret-right {
+	@include icon(caret-right);
+}
+.icon-experience {
+	@include icon(experience);
+}
+.icon-households {
+	@include icon(households);
+}
+.icon-integrity {
+	@include icon(integrity);
+}
+.icon-performance {
+	@include icon(performance);
+}
+.icon-recommendations {
+	@include icon(recommendations);
+}
+.icon-s-fb {
+	@include icon(s-fb);
+}
+.icon-s-in {
+	@include icon(s-in);
+}
+.icon-s-li {
+	@include icon(s-li);
+}
+.icon-s-tw {
+	@include icon(s-tw);
+}
+.icon-technology {
+	@include icon(technology);
+}

@@ -39,18 +39,39 @@ $gray-dark:             #696969;
 $black:                 #000000;
 $white:                 #ffffff;
 
-$state-success-text: $brand-success;
-$state-info-text: $brand-warning;
-$state-warning-text: $brand-warning;
-$state-danger-text: $brand-danger;
 
+
+
+// Buttons
+$btn-border-radius-base:   0;
+$btn-border-radius-large:  0;
+$btn-border-radius-small:  0;
 $btn-default-color:              #696969 !default;
 $btn-default-bg:                 #000;
 $btn-default-border:             #5694DF;
 
 // General
 $page-header-border-color: transparent;
+
+
+
+// Alerts
+$state-success-text: $brand-success;
+$state-info-text: $brand-warning;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
+
+
+// Navbar
+$navbar-height: 50px;
+$navbar-border-radius: 0;
+$navbar-margin-bottom: 0;
+$navbar-default-link-color: #FFFFFF;
+$navbar-default-brand-hover-color: #FFF;
+$navbar-default-link-hover-color: #fff;
+$navbar-default-bg: transparent;
 $nav-link-hover-bg: transparent;
+
 
 // Layout
 //$grid-float-breakpoint: 992px; // never hide humbugur
