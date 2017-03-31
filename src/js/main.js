@@ -22,6 +22,30 @@
           //"offset": 205,
         });
 
+
+        var is_mobile =
+            is_tablet =
+            is_desktop =
+            not_mobile =
+            not_tablet =
+            not_desktop = false;
+
+        if ($(window).width() <= 767) {
+          is_mobile = true;
+        } else {
+          not_mobile = true;
+        }
+        if ($(window).width() >= 768 && $(window).width() <= 991) {
+          is_tablet = true;
+        } else {
+          not_tablet = true;
+        }
+        if ($(window).width() >= 992) {
+          is_desktop = true;
+        } else {
+          not_desktop = true;
+        }
+
         
         // Scroll initially if there's a hash in the url 
         // add velocity scrollTo if needed
@@ -152,29 +176,4 @@ function pushBody(includeSubHeader) {
   }
 
   $('body').css({paddingTop: topNavHeight});
-}
-
-function responsiveHelpers() {
-  var is_mobile = false,
-      is_tablet = false,
-      is_desktop = false,
-      not_mobile = false,
-      not_tablet = false,
-      not_desktop = false;
-
-  if ($(window).width() <= 767) {
-    is_mobile = true;
-  } else {
-    not_mobile = true;
-  }
-  if ($(window).width() >= 768 && $(window).width() <= 991) {
-    is_tablet = true;
-  } else {
-    not_tablet = true;
-  }
-  if ($(window).width() >= 992) {
-    is_desktop = true;
-  } else {
-    not_desktop = true;
-  }
 }
