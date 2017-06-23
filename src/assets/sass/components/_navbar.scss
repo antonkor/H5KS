@@ -1,0 +1,40 @@
+.navbar-toggle {
+  margin: 0;
+  padding-top: 0;
+  border: 0;
+  border-radius: 0;
+}
+.navbar-collapse {
+
+  .nav {
+    text-align: center;
+
+    li {
+      display: block;
+    }
+  }
+}
+@include mobile-only() {
+  .navbar-collapse {
+    background: #fff;
+    position: absolute;
+    top: 101px;
+    right: 0;
+    left: 0;
+    
+    .navbar-nav {
+      height: 100vh !important;
+    }
+  }
+
+}
+
+@include mq(tablet-up) {
+
+  .navbar-collapse {
+    position: static;
+    float: right;
+    background: transparent;
+  }
+
+}

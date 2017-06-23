@@ -19,23 +19,24 @@ html.no-js(lang='en')
     body(class=bodyClass)
       header#page-header.page-header.fixed-header.animated.fadeIn
         div.container
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar_collapse')
-            span.sr-only Toggle navigation
-            i.hamburger-icon
-              span.line.line-1
-              span.line.line-2
-              span.line.line-3
+          div.page-header-inner
+            a.logo-brand(href="index.html")
+              img(src='assets/images/brand-logo.png')
 
-          a.logo-brand(href="index.html")
-            img(src='assets/images/brand-logo.png')
-          nav#navbar_collapse.collapse.navbar-collapse
-            ul.nav.navbar-nav
-              each val, key in topMenu
-                li
-                  if activeMenuItem === key
-                    a.active(href=val, title=key)= key
-                  else
-                    a(href=val, title=key)= key
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar_collapse')
+              span.sr-only Toggle navigation
+              i.hamburger-icon
+                span.line.line-1
+                span.line.line-2
+                span.line.line-3
+            nav#navbar_collapse.collapse.navbar-collapse
+              ul.nav.navbar-nav
+                each val, key in topMenu
+                  li
+                    if activeMenuItem === key
+                      a.active(href=val, title=key)= key
+                    else
+                      a(href=val, title=key)= key
 
     block pageBody
     footer.page-footer.animated.text-center.fadeIn.delay-sm

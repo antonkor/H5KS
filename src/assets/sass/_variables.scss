@@ -50,9 +50,9 @@ $font-size-base: 16.67px;
 
 
 // Headings
-$headings-font-family:    $font-secondary;
-$headings-font-weight:    4900;
-$headings-line-height:    1.1;
+$headings-font-family: $font-secondary;
+$headings-font-weight: 400;
+$headings-line-height: 1.1;
 $headings-color: #454545;
 $font-size-h1: 37.5px;
 $font-size-h2: 33.33px;
@@ -71,9 +71,9 @@ $link-hover-decoration: none;
 $btn-border-radius-base:   0;
 $btn-border-radius-large:  0;
 $btn-border-radius-small:  0;
-$btn-default-color:              #696969 !default;
-$btn-default-bg:                 #000;
-$btn-default-border:             #5694DF;
+$btn-default-color: #696969 !default;
+$btn-default-bg: #000;
+$btn-default-border: #5694DF;
 
 
 
@@ -93,6 +93,7 @@ $state-danger-text: $brand-danger;
 // Navbar
 $navbar-height: 50px;
 $navbar-border-radius: 0;
+$navbar-padding-horizontal: 0;
 $navbar-margin-bottom: 0;
 $navbar-default-link-color: #FFFFFF;
 $navbar-default-brand-hover-color: #FFF;
