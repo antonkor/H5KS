@@ -1,0 +1,32 @@
+.navbar-nav {
+	a {
+		color: #363636;
+
+		&:before {
+			display: block;
+			content: '';
+			height: 1px;
+			position: absolute;
+			right: 15px;
+			bottom: 0;
+			left: 15px;
+			background-color: #363636;
+			transform: scaleX(0);
+			transition: transform .1s ease-in-out;
+		}
+
+		&:hover {
+			&:before {
+				@include tablet-up {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+.nav {
+	li {
+		display: inline-block;
+	}
+}

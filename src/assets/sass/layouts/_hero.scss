@@ -1,0 +1,13 @@
+.hero-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  min-height: 500px;
+  margin-bottom: 50px;
+  background-color: #ff5f5f;
+
+  h1, p {
+    color: white;
+  }
+}

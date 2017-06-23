@@ -1,0 +1,152 @@
+// Typography
+$font-size-base: 16px;
+$font-size-h4: 18px;
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-primary: "Gotham Rounded", sans-serif;
+$font-secondary: $font-family-base;
+$font-tertiary: '';
+
+
+// Headings
+$headings-font-family:    $font-secondary;
+$headings-font-weight:    900;
+$headings-line-height:    1;
+$headings-color: #454545;
+
+
+// Colors
+$body-bg: #fff;
+$text-color: #8A8A89;
+
+$brand-primary:         #ff5f5f;
+$brand-primary-dark:    $brand-primary;
+$brand-secondary:       #4FA75D;
+//$brand-secondary-dark:  $brand-secondary;
+//$brand-secondary-alt:   #3B5169;
+$brand-tertiary:        #B29CCC;
+
+$brand-success:         #4FA75D;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$gray-lighter:          #B0B4BA;
+$gray-light:            #DCDCDC;
+$gray:                  #3D3D3D;
+$gray-dark:             #505050;
+$black:                 #000000;
+$white:                 #ffffff;
+$black-dark:            #423651;
+
+
+
+$state-success-text: $brand-success;
+$state-info-text: $brand-warning;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
+
+$btn-default-color:              #696969 !default;
+$btn-default-bg:                 #000;
+$btn-default-border:             #5694DF;
+
+// General
+$page-header-border-color: transparent;
+$nav-link-hover-bg: transparent;
+
+
+// Misc Colors
+$gray:        #9B9B9B;
+$red:         #F25454;
+$coral:       #EF6868;  
+$pink:        #E65D87;
+$pink-light:  #FFC6C1;
+$green:       #88C339;
+$emerald:     #58D679;
+$green-light: #BCE486;
+$yellow:      #F8DA34;
+$orange:      #FF9C3E;
+$tangerine:   #FFBC02; 
+$teal:        #7BC7AD; 
+$blue:        #19BED6;
+$blue-light:  #66C8E6;
+$blue-dark:   #2087CC;
+$blue-cool:   #6D92D8;
+$purple:      #D891DD;
+$brown:       #D2A278;
+
+$filter-colors: 
+  gray $gray,
+  red $red,
+  coral $coral,
+  pink $pink,
+  green $green,
+  emerald $emerald,
+  green-light $green-light,
+  yellow $yellow,
+  orange $orange,
+  tangerine $tangerine,
+  teal $teal,
+  blue $blue,
+  blue-light $blue-light,
+  blue-dark $blue-dark,
+  blue-cool $blue-cool,
+  purple $purple,
+  brown $brown;
+
+// Usage 
+// .item {
+//   @each $type in $filter-colors {
+//     &.item-#{nth($type, 1)}:before {
+//       background-color: #{nth($type, 2)};
+//     }
+//   }
+// }
+
+
+
+// Buttons
+$btn-border-radius-base:   0;
+$btn-border-radius-large:  0;
+$btn-border-radius-small:  0;
+$btn-default-color:              #696969 !default;
+$btn-default-bg:                 #000;
+$btn-default-border:             #5694DF;
+
+// General
+$page-header-border-color: transparent;
+
+
+
+// Alerts
+$state-success-text: $brand-success;
+$state-info-text: $brand-warning;
+$state-warning-text: $brand-warning;
+$state-danger-text: $brand-danger;
+
+
+// Navbar
+$navbar-height: 50px;
+$navbar-border-radius: 0;
+$navbar-margin-bottom: 0;
+$navbar-default-link-color: #FFFFFF;
+$navbar-default-brand-hover-color: #FFF;
+$navbar-default-link-hover-color: #fff;
+$navbar-default-bg: transparent;
+$nav-link-hover-bg: transparent;
+
+
+// Layout
+//$grid-float-breakpoint: 992px; // never hide humbugur
+$sidebar-width: 300px;
+
+
+
+// Form
+$input-color: $gray-dark;
+
+
+// Modal
+$modal-backdrop-bg:           #000;
+$modal-backdrop-opacity:      .7;
+

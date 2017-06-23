@@ -1,0 +1,218 @@
+//
+// Buttons
+// --------------------------------------------------
+// Common styles
+.btn {
+  background-image: none;
+  border-radius: 0px;
+  box-shadow: none;
+
+  //font-family: $font-primary;
+  //letter-spacing: 0px;
+
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+
+  // Remove the gradient for the pressed/active state
+  &:active,
+  &.active {
+    background-image: none;
+    box-shadow: none;
+  }
+  &:focus {
+    outline: none !important;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    box-shadow: none;
+  }
+  .badge {
+    text-shadow: none;
+  }
+}
+
+// Size adjustments
+.btn {
+  padding: 14px 30px 12px;
+  font-size: 16px;
+}
+.btn-xs {
+  font-size: 12px;
+  font-weight: 300;
+}
+.btn-sm {
+  padding: 8px 20px 7px;
+  font-size: 14px;
+}
+.btn-md {
+  padding: 12px 30px 11px;
+  font-size: 16px;
+}
+.btn-lg {
+  padding: 20px 45px;
+  font-size: 18px;
+}
+
+
+// Mixin for generating new styles
+@mixin btn-styles($bg-color: #555, $border-color: #555, $text-color: #FFF) {
+  background-color: $bg-color;
+  border-color: $border-color;
+  border-width: 2px;
+  color: $text-color;
+  
+
+  &:hover,
+  &:focus  {
+    background-color: lighten($bg-color, 8%);
+    border-color: lighten($border-color, 8%);
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-color: lighten($bg-color, 8%);
+    border-color: lighten($border-color, 8%);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: lighten($bg-color, 15%);
+    }
+  }
+
+}
+// Apply the mixin to the buttons
+.btn { @include btn-styles(transparent, transparent, #696969 );}
+.btn-default { @include btn-styles(#D7DCE1, #D7DCE1, black );}
+.btn-light { @include btn-styles(#fff, #fff, #333);}
+.btn-dark { @include btn-styles($btn-default-bg, $btn-default-bg);}
+.btn-primary { @include btn-styles($btn-primary-bg, $btn-primary-bg); }
+.btn-secondary { @include btn-styles($brand-secondary, $brand-secondary); }
+.btn-tertiary { @include btn-styles($brand-tertiary, $brand-tertiary); }
+.btn-success { @include btn-styles($btn-success-bg, $btn-success-bg); }
+.btn-info    { @include btn-styles($btn-info-bg, $btn-info-bg); }
+.btn-warning { @include btn-styles($btn-warning-bg, $btn-warning-bg); }
+.btn-danger  { @include btn-styles($btn-danger-bg, $btn-danger-bg); }
+
+
+// inverted buttons
+@mixin btn-inverse($bg-color: #555, $border-color: #555, $text-color: #FFF) {
+  background-color: $bg-color;
+  border-color: $border-color;
+  border-width: 2px;
+  color: $text-color;
+
+  &:hover,
+  &:focus  {
+    background-color: $border-color;
+    border-color: $border-color;
+    color: white;
+  }
+
+  &:active,
+  &.active {
+    background-color: $border-color;
+    border-color: $border-color;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: darken($bg-color, 12%);
+    }
+  }
+}
+.btn-default-inverse { @include btn-inverse(transparent, #D7DCE1, $gray-dark); }
+.btn-light-inverse { @include btn-inverse(transparent, white, white); &:focus, &:hover {color: $btn-default-bg }}
+.btn-dark-inverse { @include btn-inverse(transparent, $btn-default-bg, $btn-default-bg );}
+.btn-primary-inverse { @include btn-inverse(transparent, $btn-primary-bg, $btn-primary-bg); }
+.btn-secondary-inverse { @include btn-inverse(transparent, $brand-secondary, $brand-secondary); }
+.btn-tertiary-inverse { @include btn-inverse(transparent, $brand-tertiary, $brand-tertiary); }
+.btn-success-inverse { @include btn-inverse(transparent, $btn-success-bg, $btn-success-bg); }
+.btn-info-inverse    { @include btn-inverse(transparent, $btn-info-bg, $btn-info-bg); }
+.btn-warning-inverse { @include btn-inverse(transparent, $btn-warning-bg, $btn-warning-bg); }
+.btn-danger-inverse  { @include btn-inverse(transparent, $btn-danger-bg, $btn-danger-bg); }
+
+
+// reset button style
+.btn-clear {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  overflow: hidden;
+}
+
+// Alt buttons
+@mixin btn-link($color: #333, $hover-color: lighten($color, 8%) ) {
+  padding: 0 1px;
+  border-bottom: 1px dashed $color;
+  //font-family: $font-primary;
+  letter-spacing: 0px;
+  color: $color;
+  text-transform: initial;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px dashed $hover-color;
+    color: $hover-color;
+  }
+}
+.btn-link { @include btn-link(#696969, black) }
+.btn-primary-link { @include btn-link($brand-primary) }
+.btn-secondary-link { @include btn-link($brand-secondary) }
+.btn-tertiary-link { @include btn-link($brand-tertiary) }
+.btn-link-alt {
+  border: none;
+  //font-family: $font-primary;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@mixin btn-borderless($color: $brand-primary, $hover-color: lighten($color, 8%) ) {
+  border: 0;
+  background-color: transparent;
+  color: $color;
+  padding: 0 1px;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &:active,
+  &.active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+.btn-borderless { @include btn-borderless(#696969, black); }
+.btn-primary-borderless { @include btn-borderless($brand-primary); }
+.btn-secondary-borderless { @include btn-borderless($brand-secondary); }
+
+// Button Group
+.btn-group {
+  display: flex;
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+}

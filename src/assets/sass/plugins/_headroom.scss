@@ -1,0 +1,22 @@
+.headroom {
+  padding: 25px 0;
+  transition: all .3s ease-in-out;
+  animation-fill-mode: none;
+}
+
+// .headroom.headroom--top {
+
+// }
+
+.headroom.headroom--not-top {
+  padding: 15px 0;
+  background-color: white;
+}
+
+// .headroom.headroom--pinned {
+
+// }
+
+// .headroom.headroom--unpinned {
+//   @include transform(translateY(-100%));
+// }
