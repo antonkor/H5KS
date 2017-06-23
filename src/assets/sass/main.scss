@@ -3,17 +3,17 @@
 @import "bootstrap/variables";
 
 
-/* Global Plugins */
-@import "plugins/headroom";
-//@import "../../dist/assets/css/icons-sprite";
-@import "plugins/iconfont";
-
-
 /* Global Partials */
 @import "common/*";
 @import "components/*";
 @import "addons/*";
 @import "layouts/*";
+
+
+/* Global Plugins */
+@import "plugins/headroom";
+//@import "../../dist/assets/css/icons-sprite";
+@import "plugins/iconfont";
 
 
 /* Utilities */

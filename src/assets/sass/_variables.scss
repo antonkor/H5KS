@@ -1,21 +1,3 @@
-// Typography
-$font-size-base: 16px;
-$font-size-h4: 18px;
-
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
-$font-primary: "Gotham Rounded", sans-serif;
-$font-secondary: $font-family-base;
-$font-tertiary: '';
-
-
-// Headings
-$headings-font-family:    $font-secondary;
-$headings-font-weight:    900;
-$headings-line-height:    1;
-$headings-color: #454545;
-
-
 // Colors
 $body-bg: #fff;
 $text-color: #8A8A89;
@@ -39,69 +21,49 @@ $black:                 #000000;
 $white:                 #ffffff;
 $black-dark:            #423651;
 
-
-
-$state-success-text: $brand-success;
-$state-info-text: $brand-warning;
-$state-warning-text: $brand-warning;
-$state-danger-text: $brand-danger;
-
-$btn-default-color:              #696969 !default;
-$btn-default-bg:                 #000;
-$btn-default-border:             #5694DF;
-
-// General
-$page-header-border-color: transparent;
-$nav-link-hover-bg: transparent;
-
-
 // Misc Colors
-$gray:        #9B9B9B;
-$red:         #F25454;
-$coral:       #EF6868;  
-$pink:        #E65D87;
-$pink-light:  #FFC6C1;
-$green:       #88C339;
-$emerald:     #58D679;
-$green-light: #BCE486;
-$yellow:      #F8DA34;
-$orange:      #FF9C3E;
-$tangerine:   #FFBC02; 
-$teal:        #7BC7AD; 
-$blue:        #19BED6;
-$blue-light:  #66C8E6;
-$blue-dark:   #2087CC;
-$blue-cool:   #6D92D8;
-$purple:      #D891DD;
-$brown:       #D2A278;
-
-$filter-colors: 
+$misc-colors: 
   gray $gray,
-  red $red,
-  coral $coral,
-  pink $pink,
-  green $green,
-  emerald $emerald,
-  green-light $green-light,
-  yellow $yellow,
-  orange $orange,
-  tangerine $tangerine,
-  teal $teal,
-  blue $blue,
-  blue-light $blue-light,
-  blue-dark $blue-dark,
-  blue-cool $blue-cool,
-  purple $purple,
-  brown $brown;
+  red $brand-primary;
 
 // Usage 
 // .item {
-//   @each $type in $filter-colors {
+//   @each $type in $misc-colors {
 //     &.item-#{nth($type, 1)}:before {
 //       background-color: #{nth($type, 2)};
 //     }
 //   }
 // }
+
+
+
+// Fonts
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-primary: $font-family-base;
+$font-secondary: "Proxima Nova", sans-serif;
+$font-tertiary: '';
+
+$font-size-base: 16.67px;
+
+
+
+// Headings
+$headings-font-family:    $font-secondary;
+$headings-font-weight:    4900;
+$headings-line-height:    1.1;
+$headings-color: #454545;
+$font-size-h1: 37.5px;
+$font-size-h2: 33.33px;
+$font-size-h3: 16.67px;
+$font-size-h4: 16.67px;
+
+
+// Links
+$link-color: $brand-primary;
+$link-hover-color: $brand-primary;
+$link-hover-decoration: none;
 
 
 
@@ -113,7 +75,9 @@ $btn-default-color:              #696969 !default;
 $btn-default-bg:                 #000;
 $btn-default-border:             #5694DF;
 
-// General
+
+
+// Header
 $page-header-border-color: transparent;
 
 
@@ -123,6 +87,7 @@ $state-success-text: $brand-success;
 $state-info-text: $brand-warning;
 $state-warning-text: $brand-warning;
 $state-danger-text: $brand-danger;
+
 
 
 // Navbar
@@ -136,6 +101,7 @@ $navbar-default-bg: transparent;
 $nav-link-hover-bg: transparent;
 
 
+
 // Layout
 //$grid-float-breakpoint: 992px; // never hide humbugur
 $sidebar-width: 300px;
@@ -146,7 +112,8 @@ $sidebar-width: 300px;
 $input-color: $gray-dark;
 
 
+
 // Modal
-$modal-backdrop-bg:           #000;
-$modal-backdrop-opacity:      .7;
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: .7;
 

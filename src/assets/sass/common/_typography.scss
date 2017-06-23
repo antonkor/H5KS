@@ -9,39 +9,36 @@ body {
 
 // Reset links
 a:hover, a:focus {
-  text-decoration: none;
+  
 }
 
 
-// General heading style
+
 //h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  //color: #4C5463;
-  font-family: $font-primary;
+  
 } 
 
 
 // Font sizes
 .h1 {
-  font-size: 28px;
-  text-transform: uppercase;
+  
 }
 .h2 {
-  font-size: 24px;
-  text-transform: uppercase;
+  
 }
 .h3 {
-
+  
 }
 .h4 {
 
 }
 @include mq(tablet-up) {
   .h1 {
-    font-size: 48px;
+   
   }
   .h2 {
-    font-size: 38px;
+    
   }
   .h3 {
 
@@ -52,10 +49,10 @@ a:hover, a:focus {
 }
 @include mq(desktop-up) {
   .h1 {
-    font-size: 68px;
+    
   }
   .h2 {
-    font-size: 48px;
+    
   }
   .h3 {
 
@@ -69,4 +66,8 @@ a:hover, a:focus {
 // Heading styles
 .heading-fancy {
 
+}
+
+.lead {
+  font-size: 17.71px;
 }
