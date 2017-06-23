@@ -48,9 +48,12 @@ if(gutil.env.dev === true) {
 var basePaths = {
     src: 'src/',
     dest: 'dist/',
-    bower: 'bower_components/'
+    npm: 'node_modules/'
 };
 var paths = {
+    npm: {
+        src: 'node_modules/'
+    },
     html: {
         src: basePaths.src,
         dest: basePaths.dest
@@ -185,6 +188,7 @@ var scripts = [
     paths.scripts.src + 'bootstrap/scrollspy.js',
     paths.scripts.src + 'bootstrap/dropdown.js',
     paths.scripts.src + 'bootstrap/collapse.js',
+    //paths.npm.src + 'is-in-viewport/lib/isInViewport.js.js',
     paths.scripts.src + 'main.js'
 ];
 
@@ -200,17 +204,6 @@ gulp.task('js', function() {
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
-// Production JS (minified)
-gulp.task('min-js', function() {
-    return gulp.src(scripts)
-        .pipe(sourcemaps.init())
-        .pipe(concat('main.bundle.min.js'))
-        .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(uglify())
-        .pipe(size({showFiles: true, gzip: true}))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(paths.scripts.dest));
-});
 
 
 

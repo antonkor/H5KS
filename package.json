@@ -1,8 +1,8 @@
 {
-  "name": "RevContent",
+  "name": "H5KS",
   "version": "1.0.0",
   "description": "",
-  "author": "Hive Studio",
+  "author": "Anton Korzhuk",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
@@ -19,18 +19,17 @@
     "gulp-sass-glob": "^1.0.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprites": "^4.1.1",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.8",
     "pug-beautify": "^0.1.1",
-    "run-sequence": "^1.2.2"
-  },
-  "dependencies": {
-    "gulp-concat": "^2.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-jshint": "^2.0.4",
-    "gulp-modernizr": "^1.0.0-alpha",
+    "run-sequence": "^1.2.2",
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8"
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4"
+  },
+  "dependencies": {
+    "is-in-viewport": "^3.0.0"
   }
 }
