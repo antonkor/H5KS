@@ -178,7 +178,7 @@ var scripts = [
     paths.scripts.src + 'lib/velocity.ui.js',
     paths.scripts.src + 'plugins/headroom.min.js',
     paths.scripts.src + 'plugins/swiper.js',
-    paths.scripts.src + 'plugins/enquire.js',
+    //paths.scripts.src + 'plugins/enquire.js',
     paths.scripts.src + 'plugins/autogrow.js',
     paths.scripts.src + 'plugins/smooth-scroll.js',
     paths.scripts.src + 'bootstrap/modal.js',

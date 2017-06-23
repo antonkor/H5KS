@@ -22,5 +22,15 @@
     "gulp-util": "^3.0.7",
     "pug-beautify": "^0.1.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
   }
 }
