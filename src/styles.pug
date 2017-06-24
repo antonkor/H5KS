@@ -60,23 +60,16 @@ block pageBody
           a(href="#").btn.btn-default btn-default
           a(href="#").btn.btn-light btn-light
           a(href="#").btn.btn-dark btn-dark
+          br
           a(href="#").btn.btn-primary btn-primary
+          a(href="#").btn.btn-primary-alt btn-primary-alt
           a(href="#").btn.btn-secondary btn-secondary
           a(href="#").btn.btn-tertiary btn-tertiary
+          br
           a(href="#").btn.btn-success btn-success
           a(href="#").btn.btn-info btn-info
           a(href="#").btn.btn-warning btn-warning
           a(href="#").btn.btn-danger btn-danger
-
-      .container.pt-20.pb-10
-        h3.h3 Alternate Buttons
-        div.btn-examples
-          a(href="#").btn.btn-default-alt btn-default-alt
-          a(href="#").btn.btn-light-alt btn-light-alt
-          a(href="#").btn.btn-dark-alt btn-dark-alt
-          a(href="#").btn.btn-primary-alt btn-primary-alt
-          a(href="#").btn.btn-secondary-alt btn-secondary-alt
-          a(href="#").btn.btn-tertiary-alt btn-tertiary-alt
 
       .container
         h3.h3 Inverse Buttons
@@ -102,53 +95,21 @@ block pageBody
         div.btn-group.btn-group-primary
           a(href="#").btn.btn-primary btn-group
           a(href="#").btn.btn-primary-inverse btn-group
-
+      
       .container.mt-40
-        h2.h2 Buttons Interactive
-        div.mb-10
-          .btn-group(data-toggle='buttons')
-            label.btn.btn-secondary.active
-              input#option1(type='radio', name='options', autocomplete='off', checked='')
-              |  Radio 1 (preselected)
-            label.btn.btn-secondary
-              input#option2(type='radio', name='options', autocomplete='off')
-              |  Radio 2
-            label.btn.btn-secondary
-              input#option3(type='radio', name='options', autocomplete='off')
-              |  Radio 3
-        div.mb-10
-          .btn-group(data-toggle='buttons')
-            label.btn.btn-secondary.active
-              input(type='checkbox', autocomplete='off', checked='')
-              |  Checkbox 1 (pre-checked)
-            label.btn.btn-secondary
-              input(type='checkbox', autocomplete='off')
-              |  Checkbox 2
-            label.btn.btn-secondary
-              input(type='checkbox', autocomplete='off')
-              |  Checkbox 3
+        h2.h2 Labels &amp; Badges
+        div.mb-20
+          div.mb-15
+            a(href="#").label.label-default.label-sm Default Label
+          div.mb-15
+            a(href="#").label.label-primary.label-sm Primary Label
+          div.mb-15
+            a(href="#").label.label-secondary.label-sm Secondary Label
+        div.mb-20
+          a(href="#") Badge 
+            span.badge 5
 
-        .btn-group.mb-10
-            button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-              | Action
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider(role='separator')
-              li
-                a(href='#') Separated link
 
-        div
-          button.btn.btn-secondary(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-            | Button open window
-          #collapseExample.collapse
-            .well
-              | ...
 
       .container.mt-40
         h2.h2 Form Elements

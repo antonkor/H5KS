@@ -6,10 +6,6 @@
   background-image: none;
   border-radius: 0px;
   box-shadow: none;
-
-  //font-family: $font-primary;
-  //letter-spacing: 0px;
-
   text-shadow: none;
   text-transform: uppercase;
   transition: all .3s ease-in-out;
@@ -214,5 +210,14 @@
   .btn {
     width: 100%;
     padding: 10px;
+  }
+
+  .btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }

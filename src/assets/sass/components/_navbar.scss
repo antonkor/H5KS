@@ -1,3 +1,36 @@
+.navbar-nav {
+  text-align: center;
+
+	a {
+		color: #363636;
+		@include tablet-up() { color: #f7f0f5; }
+
+		&:before {
+			display: block;
+			content: '';
+			height: 1px;
+			position: absolute;
+			right: 15px;
+			bottom: 0;
+			left: 15px;
+			background-color: #f7f0f5;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform .1s ease-in-out;
+		}
+
+		&:hover {
+			&:before {
+				@include tablet-up {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+
+
 .navbar-toggle {
   margin: 0;
   padding-top: 0;
@@ -5,10 +38,9 @@
   border-radius: 0;
 }
 .navbar-collapse {
+  text-align: center;
 
   .nav {
-    text-align: center;
-
     li {
       display: block;
     }
@@ -18,12 +50,13 @@
   .navbar-collapse {
     background: #fff;
     position: absolute;
-    top: 101px;
+    top: 105px;
+    .headroom--not-top & {top: 65px;}
     right: 0;
     left: 0;
     
     .navbar-nav {
-      height: 100vh !important;
+     // height: 100vh !important;
     }
   }
 
