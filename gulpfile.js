@@ -66,6 +66,10 @@ var paths = {
         src: basePaths.src + 'assets/images/',
         dest: basePaths.dest + 'assets/images/'
     },
+    iconfont: {
+        src: basePaths.src + 'assets/icons/iconfont/*.svg',
+        dest: basePaths.dest + 'assets/fonts/iconfont/'
+    },
     scripts: {
         src: basePaths.src + 'assets/js/',
         dest: basePaths.dest + 'assets/js/'
@@ -150,27 +154,28 @@ gulp.task('images', function() {
 //         .pipe(gulp.dest('./'));
 // });
 
-// // Compile Iconfont
-// var fontName = 'iconfont';
-// gulp.task('iconfont', function() {
-//     gulp.src(['assets/icons/iconfont/*.svg'])
-//         .pipe(iconfontCss({
-//             fontName: fontName,
-//             path: 'assets/sass/plugins/_iconfont-template.scss',
-//             targetPath: '../../assets/sass/plugins/_iconfont.scss',
-//             fontPath: '../../assets/icons/'
-//         }))
-//         .pipe(iconfont({
-//             fontName: fontName,
-//             formats: ['ttf', 'eot', 'woff', 'woff2'],
-//             appendCodepoints: true,
-//             appendUnicode: false,
-//             normalize: true,
-//             fontHeight: 1000,
-//             centerHorizontally: true
-//         }))
-//         .pipe(gulp.dest('./assets/icons/'));
-// });
+// Compile Iconfont
+var fontName = 'iconfont';
+gulp.task('iconfont', function() {
+    gulp.src(paths.iconfont.src, {base: './'})
+        .pipe(iconfontCss({
+            fontName: fontName,
+            path: 'src/assets/sass/plugins/_iconfont-template.scss',
+            fontPath: '../fonts/iconfont/',
+            targetPath: '../../../../src/assets/sass/plugins/_iconfont.scss' 
+            
+        }))
+        .pipe(iconfont({
+            fontName: fontName,
+            formats: ['ttf', 'eot', 'woff', 'woff2'],
+            appendCodepoints: true,
+            appendUnicode: false,
+            normalize: true,
+            fontHeight: 1000,
+            centerHorizontally: true
+        }))
+        .pipe(gulp.dest(paths.iconfont.dest));
+});
 
 
 
@@ -238,7 +243,7 @@ gulp.task('serve', ['css'], function() {
 
     // // Watch for Icon changes
     // gulp.watch('assets/icons/svg-sprite/*.svg', ['svg-sprite']);
-    // gulp.watch('assets/icons/iconfont/*.svg', ['iconfont']);
+    gulp.watch(paths.iconfont.src, ['iconfont']);
 
     // // Watch for JS changes
     gulp.watch(paths.scripts.src + '**/*.js', ['js']);

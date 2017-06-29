@@ -48,6 +48,14 @@ $font-tertiary: '';
 $font-size-base: 16.67px;
 
 
+// Font weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+
+
 
 // Headings
 $headings-font-family: $font-secondary;
@@ -75,7 +83,6 @@ $btn-default-color: #696969 !default;
 $btn-default-bg: #000;
 $btn-default-border: #5694DF;
 $btn-font-weight: 400;
-
 
 
 
@@ -119,4 +126,10 @@ $input-color: $gray-dark;
 // Modal
 $modal-backdrop-bg: #000;
 $modal-backdrop-opacity: .7;
+
+
+// Misc
+
+$hr-border: #e6e6e6;
+
 

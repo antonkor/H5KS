@@ -29,6 +29,30 @@
 	}
 }
 
+.navbar-btn {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  top: 4px;
+
+  @include tablet-up {
+    .navbar-nav {
+      float: left;
+      margin: 0;
+    }
+  }
+
+
+
+  .btn {
+    @include mobile-only { margin-right: 15px; margin-left: 15px; }
+    @include tablet-up { margin-left: 15px; }
+    &:hover {
+      
+    }
+  }
+}
+
 
 
 .navbar-toggle {
