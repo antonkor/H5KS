@@ -30,6 +30,8 @@
     "gulp-jshint": "^2.0.4"
   },
   "dependencies": {
-    "is-in-viewport": "^3.0.0"
+    "is-in-viewport": "^3.0.0",
+    "jquery-match-height": "^0.7.2",
+    "trunk8": "0.0.1"
   }
 }

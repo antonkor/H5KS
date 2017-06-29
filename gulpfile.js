@@ -135,7 +135,7 @@ gulp.task('images', function() {
 });
 
 
-// // Build SVG sprite
+// Build SVG sprite
 // gulp.task('svg-sprite', function() {
 //     return gulp.src('assets/icons/svg-sprite/*.svg')
 //         .pipe(svgSprite({
@@ -162,7 +162,7 @@ gulp.task('iconfont', function() {
             fontName: fontName,
             path: 'src/assets/sass/plugins/_iconfont-template.scss',
             fontPath: '../fonts/iconfont/',
-            targetPath: '../../../../src/assets/sass/plugins/_iconfont.scss' 
+            targetPath: '../../../../src/assets/sass/plugins/_iconfont.scss' // from dist/assets/fonts/iconfont/     (dest directory)
             
         }))
         .pipe(iconfont({
@@ -179,6 +179,7 @@ gulp.task('iconfont', function() {
 
 
 
+
 // Concat and minify JS
 var scripts = [
     paths.scripts.src + 'lib/modernizr.js',
@@ -186,14 +187,17 @@ var scripts = [
     paths.scripts.src + 'lib/velocity.ui.js',
     paths.scripts.src + 'plugins/headroom.min.js',
     paths.scripts.src + 'plugins/swiper.js',
-    //paths.scripts.src + 'plugins/enquire.js',
+    paths.scripts.src + 'plugins/enquire.js',
     paths.scripts.src + 'plugins/autogrow.js',
     paths.scripts.src + 'plugins/smooth-scroll.js',
     paths.scripts.src + 'bootstrap/modal.js',
     paths.scripts.src + 'bootstrap/scrollspy.js',
     paths.scripts.src + 'bootstrap/dropdown.js',
     paths.scripts.src + 'bootstrap/collapse.js',
-    //paths.npm.src + 'is-in-viewport/lib/isInViewport.js.js',
+    // paths.npm.src + 'is-in-viewport/lib/isInViewport.js.js',
+    // paths.npm.src + 'jquery-match-height/jquery.matchHeight.js',
+    // paths.npm.src + 'trunk8/trunk8.js',
+
     paths.scripts.src + 'main.js'
 ];
 
@@ -245,9 +249,11 @@ gulp.task('serve', ['css'], function() {
     // gulp.watch('assets/icons/svg-sprite/*.svg', ['svg-sprite']);
     gulp.watch(paths.iconfont.src, ['iconfont']);
 
+
     // // Watch for JS changes
     gulp.watch(paths.scripts.src + '**/*.js', ['js']);
-    gulp.watch(paths.scripts.dest + 'main.bundle.js').on('change', browserSync.reload);
+    gulp.watch(paths.scripts.dest + '**/*.js').on('change', browserSync.reload);
+
 
 
 });
