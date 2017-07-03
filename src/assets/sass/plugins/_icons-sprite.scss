@@ -1,0 +1,15 @@
+.is-icon {
+    font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../sprites/icons-sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 5.2em 10.4em;
+
+      .no-svg & {
+        background-image: url("../dist/assets/sprites/icons-sprite.png");
+      }
+    }
+}

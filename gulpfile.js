@@ -26,9 +26,12 @@ var gulp = require('gulp'),
     newer = require('gulp-newer'),
     imagemin = require('gulp-imagemin'),
     // icons
-    svgSprite = require("gulp-svg-sprites"),
     iconfont = require('gulp-iconfont'),
-    iconfontCss = require('gulp-iconfont-css');
+    iconfontCss = require('gulp-iconfont-css'),
+    svgSprite = require("gulp-svg-sprites"),
+    filter    = require('gulp-filter'),
+    svg2png   = require('gulp-svg2png');
+
 
 
 
@@ -65,6 +68,10 @@ var paths = {
     images: {
         src: basePaths.src + 'assets/images/',
         dest: basePaths.dest + 'assets/images/'
+    },
+    svg_sprite: {
+        src: basePaths.src + 'assets/icons/svg-sprite/*.svg',
+        dest: basePaths.dest + 'assets/sprites/'
     },
     iconfont: {
         src: basePaths.src + 'assets/icons/iconfont/*.svg',
@@ -136,23 +143,26 @@ gulp.task('images', function() {
 
 
 // Build SVG sprite
-// gulp.task('svg-sprite', function() {
-//     return gulp.src('assets/icons/svg-sprite/*.svg')
-//         .pipe(svgSprite({
-//             //mode: "sprite",
-//             cssFile: 'assets/sass/plugins/_icons-sprite.css',
-//             svg: {
-//                 sprite: 'assets/icons/icons-sprite.svg',
-//                 //defs:    'assets/icons/icons-def.svg',
-//                 //symbols: 'assets/icons/icons-symbols.svg'
-//             },
-//             svgPath: '../../%f',
+gulp.task('svg-sprite', function() {
+    return gulp.src(paths.svg_sprite.src)
+        .pipe(svgSprite({
+            //mode: "sprite",
+            cssFile: 'src/assets/sass/plugins/_icons-sprite.css',
+            svg: {
+                sprite: paths.svg_sprite.dest + 'icons-sprite.svg',
+                //defs:    'assets/icons/icons-def.svg',
+                //symbols: 'assets/icons/icons-symbols.svg'
+            },
+            //svgPath: '/%f',
+            svgPath: '../sprites/icons-sprite.svg',
 
-//             templates: { scss: true },
-//             preview: false
-//         }))
-//         .pipe(gulp.dest('./'));
-// });
+            templates: { scss: true },
+            preview: false,
+            common: 'is-icon'
+        }))
+        .pipe(gulp.dest('./'));
+});
+
 
 // Compile Iconfont
 var fontName = 'iconfont';
@@ -180,7 +190,7 @@ gulp.task('iconfont', function() {
 
 
 
-// Concat and minify JS
+// Concat and minify JS Plugins
 var scripts = [
     paths.scripts.src + 'lib/modernizr.js',
     paths.scripts.src + 'lib/velocity.js',
@@ -201,7 +211,8 @@ var scripts = [
     paths.scripts.src + 'main.js'
 ];
 
-// Dev JS
+
+// Compile JS
 gulp.task('js', function() {
     return gulp.src(scripts)
         .pipe(sourcemaps.init())
@@ -241,16 +252,13 @@ gulp.task('serve', ['css'], function() {
     gulp.watch(paths.styles.src + '**/*.+(sass|scss)', ['css']);
     gulp.watch(paths.styles.dest + 'main.css').on('change', browserSync.reload);
 
-    // Watch for Image changes
+    // Watch for Image & Icon changes
     gulp.watch(paths.images.src + '**/*', ['images']);
+    gulp.watch(paths.svg_sprite.src, ['svg-sprite']);
+    gulp.watch(paths.iconfont.src, ['iconfont']);
     gulp.watch(paths.images.dest + '**/*.+(png|jpg|svg)').on('change', browserSync.reload);
 
-    // // Watch for Icon changes
-    // gulp.watch('assets/icons/svg-sprite/*.svg', ['svg-sprite']);
-    gulp.watch(paths.iconfont.src, ['iconfont']);
-
-
-    // // Watch for JS changes
+    // Watch for JS changes
     gulp.watch(paths.scripts.src + '**/*.js', ['js']);
     gulp.watch(paths.scripts.dest + '**/*.js').on('change', browserSync.reload);
 
