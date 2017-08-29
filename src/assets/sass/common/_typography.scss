@@ -9,7 +9,7 @@ body {
 
 // Reset links
 a:hover, a:focus {
-  
+  outline: none;
 }
 
 
@@ -71,3 +71,22 @@ a:hover, a:focus {
 .text-secondary {
   color: $brand-secondary;
 }
+
+
+// Text helpers
+.text-sm { font-size: 16.67px !important; }
+.text-md { font-size: 17.71px !important; }
+.text-lg { font-size: 18.75px !important; }
+.text-xl { font-size: 33.33px !important; }
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+// Font weight overrides
+.fw-light { font-weight: $fw-light !important;  }
+.fw-regular { font-weight: $fw-regular !important; }
+.fw-semibold { font-weight: $fw-semibold !important; }
+.fw-bold { font-weight: $fw-bold !important; }
+
+

@@ -19,7 +19,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     // js
-    modernizr = require('gulp-modernizr'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     // img
@@ -37,8 +36,13 @@ var gulp = require('gulp'),
 
 // Options
 var isProduction = true;
+var isWordpress = false;
+var projName = '';
+var themeName = '';
+
 var sassOutput = 'compressed';
 var sourceMap = false;
+
 if(gutil.env.dev === true) {
     sassOutput = 'expanded';
    // sourceMap = true; not sure to exclude for production
@@ -49,8 +53,8 @@ if(gutil.env.dev === true) {
 
 // Paths
 var basePaths = {
-    src: 'src/',
-    dest: 'dist/',
+    src:  isWordpress ? '' : 'src/',
+    dest: isWordpress ? '' : 'dist/',
     npm: 'node_modules/'
 };
 var paths = {
@@ -66,7 +70,7 @@ var paths = {
         dest: basePaths.dest + 'assets/css/'
     },
     images: {
-        src: basePaths.src + 'assets/images/',
+        src: basePaths.src + 'assets/images' + (isWordpress ? '-src/' : '/'),
         dest: basePaths.dest + 'assets/images/'
     },
     svg_sprite: {
@@ -147,7 +151,7 @@ gulp.task('svg-sprite', function() {
     return gulp.src(paths.svg_sprite.src)
         .pipe(svgSprite({
             //mode: "sprite",
-            cssFile: 'src/assets/sass/plugins/_icons-sprite.css',
+            cssFile: (isWordpress ? '' : 'src/') + 'assets/sass/plugins/_icons-sprite.css',
             svg: {
                 sprite: paths.svg_sprite.dest + 'icons-sprite.svg',
                 //defs:    'assets/icons/icons-def.svg',
@@ -158,7 +162,8 @@ gulp.task('svg-sprite', function() {
 
             templates: { scss: true },
             preview: false,
-            common: 'is-icon'
+            common: 'is-icon',
+            padding: '10'
         }))
         .pipe(gulp.dest('./'));
 });
@@ -170,10 +175,9 @@ gulp.task('iconfont', function() {
     gulp.src(paths.iconfont.src, {base: './'})
         .pipe(iconfontCss({
             fontName: fontName,
-            path: 'src/assets/sass/plugins/_iconfont-template.scss',
+            path: (isWordpress ? '' : 'src/') + 'assets/sass/plugins/_iconfont-template.scss',
             fontPath: '../fonts/iconfont/',
-            targetPath: '../../../../src/assets/sass/plugins/_iconfont.scss' // from dist/assets/fonts/iconfont/     (dest directory)
-            
+            targetPath: (isWordpress ? '../../' : '../../../../src/assets/') + 'sass/plugins/_iconfont.scss' // from dist/assets/fonts/iconfont/  (dest directory)
         }))
         .pipe(iconfont({
             fontName: fontName,
@@ -201,8 +205,8 @@ var scripts = [
     paths.scripts.src + 'plugins/autogrow.js',
     paths.scripts.src + 'plugins/smooth-scroll.js',
     paths.scripts.src + 'bootstrap/modal.js',
-    paths.scripts.src + 'bootstrap/scrollspy.js',
-    paths.scripts.src + 'bootstrap/dropdown.js',
+    // paths.scripts.src + 'bootstrap/scrollspy.js',
+    // paths.scripts.src + 'bootstrap/dropdown.js',
     paths.scripts.src + 'bootstrap/collapse.js',
     // paths.npm.src + 'is-in-viewport/lib/isInViewport.js.js',
     // paths.npm.src + 'jquery-match-height/jquery.matchHeight.js',
@@ -237,16 +241,19 @@ gulp.task('serve', ['css'], function() {
 
     // Start localhost server
     browserSync.init({
-        server: "./dist", // for www dev
-        //proxy: "localhost/ewedding.com/", // for wp dev
+        server: isWordpress ? false : "./dist",
+        proxy:  isWordpress ? "localhost/" + projName + "/wp/" : 'localhost:3000',
         // notify: false,
         open: false,
         ui: false
     });
 
     // Watch for HTML/ PHP changes
-    gulp.watch(paths.html.src + '**/*.pug', ['build-html']);
+    if (isWordpress === false) {
+        gulp.watch(paths.html.src + '**/*.pug', ['build-html']);
+    }
     gulp.watch(paths.html.dest + '**/*.+(html|php)').on('change', browserSync.reload);
+
 
     // Watch for SASS changes
     gulp.watch(paths.styles.src + '**/*.+(sass|scss)', ['css']);
@@ -260,7 +267,7 @@ gulp.task('serve', ['css'], function() {
 
     // Watch for JS changes
     gulp.watch(paths.scripts.src + '**/*.js', ['js']);
-    gulp.watch(paths.scripts.dest + '**/*.js').on('change', browserSync.reload);
+    gulp.watch(paths.scripts.dest + 'main.min.js').on('change', browserSync.reload);
 
 
 

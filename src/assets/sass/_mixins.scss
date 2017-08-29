@@ -27,6 +27,13 @@
     clear: both;
   }
 }
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 // CSS3 animations
@@ -105,3 +112,13 @@
 @mixin mobile-only() { @media (max-width: 767px) { @content; } }
 @mixin custom-min($width: '') { @media screen and (min-width: $width)  { @content; } }
 @mixin custom-max($width: '') { @media screen and (max-width: $width)  { @content; } }
+
+
+
+// Convert illustrator, indesign and photoshop tracking into letter spacing.
+@function tracking( $target ){
+  @return ($target / 1000) * 1em;
+}
+@mixin tracking( $target ){
+  letter-spacing: tracking( $target );
+}

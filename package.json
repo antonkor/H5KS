@@ -29,10 +29,12 @@
     "gulp-if": "^2.0.2",
     "gulp-jshint": "^2.0.4",
     "gulp-filter": "^5.0.0",
-    "gulp-svg2png": "^2.0.2"
-
+    "gulp-svg2png": "^2.0.2",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0"
   },
   "dependencies": {
+    "aos": "^2.1.1",
     "is-in-viewport": "^3.0.0",
     "jquery-match-height": "^0.7.2",
     "trunk8": "0.0.1"

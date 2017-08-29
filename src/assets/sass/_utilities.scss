@@ -11,6 +11,13 @@
   align-items: center;
   justify-content: center;
 }
+.center-block {
+  float: none;
+}
+.relative {
+  position: relative !important;
+}
+
 
 
 // Control spacing
@@ -96,27 +103,6 @@ $i: 0;
 }
 
 
-// Text helpers
-.text-xs  {
-  font-size: 10px !important;
-  @include mq(tablet-up) { }
-}
-.text-sm  {
-  font-size: 14px !important;
-  @include mq(tablet-up) { }
-}
-.text-md  {
-  font-size: 20px !important;
-  @include mq(tablet-up) { }
-}
-.text-lg  {
-  font-size: 30px !important;
-  @include mq(tablet-up) { }
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
 
 
 // Animation delays
