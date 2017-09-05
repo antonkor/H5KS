@@ -242,7 +242,7 @@ gulp.task('serve', ['css'], function() {
     // Start localhost server
     browserSync.init({
         server: isWordpress ? false : "./dist",
-        proxy:  isWordpress ? "localhost/" + projName + "/wp/" : 'localhost:3000',
+        proxy:  isWordpress ? "localhost/" + projName + "/wp/" : false,
         // notify: false,
         open: false,
         ui: false
